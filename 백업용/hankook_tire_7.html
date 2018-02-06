@@ -1,0 +1,603 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   lang="ko" xml:lang="ko">
+ <head>
+  <meta http-equiv="Content-type" content= "text/html; charset=UTF-8" />
+  <title>TMPT</title>
+  <style type="text/css">
+	*{ margin:0; padding:0 }
+	body, html{ height:100%; }
+	li{ list-style-type:none; }
+	body{ font-size:80%; color:#000; font-family:Dotum, 돋움, arial; }
+	a:link, a:visited{ color:#000; text-decoration:none; }
+	a:hover, a:focus{ color:#f00; text-decoration:underline; }
+
+	#wrapper{ width:100%; height:100%; }
+	#header{ width:100%; height:100px; }
+	#visual{ width:100%; height:600px; }
+	#footer{ width:100%; height:675px; }
+	.container{ width:980px; height:100%; margin:auto;  }
+
+	.tab{ width:100%; height:300px; }/*section1*/
+	.best_box{  width:100%; height:300px; }/*section2*/
+	.menu_box{ width:100%; height:300px; }/*section3*/
+
+	.row{ width:100%; overflow:hidden; }
+	
+	/*section2*/
+	.row.r1{ height:50%; }
+	.row.r2{ height:50%; }
+
+	.a2{ width:50%; height:100%; float:left; }
+	.a2.a21{ }
+	.a2.a22{  }
+	
+	.a4{ width:25%; height:100%; float:left; }
+	.a4.a41{  }
+	.a4.a42{  }
+	.a4.a43{  }
+	.a4.a44{  }
+
+	/*section3*/
+	.row.r3{ height:33%; }
+	.row.r4{ height:34%; }
+	.row.r5{ height:33%; }
+	
+	.a3{ width:33%; height:100%; float:left; }
+	.a3.a31{ width:33%;  }
+	.a3.a32{ width:34%;  }
+	.a3.a33{ width:33%;  }
+
+	/*footer*/
+	.row.r6{ height:320px; }/*7칸짜리*/
+	.row.r7{ height:57px; background-color:#f6f6f6; }
+	.row.r8{ height:53px; }
+	.row.r9{ height:40px; }
+
+	.a7{ width:140px; height:125px; float:left; }
+	.a7.a71{  }
+	.a7.a72{  }
+	.a7.a73{  }
+	.a7.a74{  }
+	.a7.a75{  } 
+	.a7.a76{  }
+	.a7.a77{  }
+
+	/*#header{ width:100%; height:115px;}*/
+	#header{ position:relative; width:100%; height:90px; }
+	#header .container{ position:relative; border-bottom:4px solid #ccc; }
+
+	/*.header logo*/
+	.logo{ width:176px; height:32px; position:absolute; top:0; left:0;  }
+	.logo a{ display:block; width:100%; height:32px; }
+	.logo a img{ width:100%; }
+
+	.info{ width:100%; text-align:right; padding-top:10px; }
+	.info li{ display:inline; }
+	.info li a{ width:100px; height:50px; padding:0 8px;/*간격*/ color:rgb(68, 68, 68); background:url("E:/포트폴리오/images/bg_border.gif") no-repeat 100% 4px; font-size:85%; }
+
+	/*gnbbox*/
+	.gnbbox{ width:804px; height:50px; margin-left:176px;/*로고사이즈 만큼하려고 했으나.......*/ margin-top:10px; }
+	.hidden{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+	.gnb{ width:804px;/*980-176*/ height:50px; }
+	.gnb li{ width:110px; height:50px;/*수정다시*/ float:left; }
+	.gnb li a{ display:block; width:100%; height:50px; text-align:center; font-weight:bold; line-height:50px;  }
+	
+	/*searchbox*/
+	.searchbox{ width:100%; height:50px; position:absolute; z-index:1; }	
+	.hidden{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }/*h3 숨기기*/
+	.searchbox_type{ width:280px; height:50px; background-color:#6666ff; float:left; }/*float:left 안 하면 오른쪽이 안 올라옴*/
+	.searchbox_type li{ float:left; }/*차종, 사이즈 선택*/
+	.selectbox{ width:130px; height:50px; background-color:white; text-align:center; float:left; }	
+	.searchbox .selectbox.sb1{ background-color:yellow; }
+	.searchbox .selectbox.sb2{ background-color:pink; }
+	.searchbox .selectbox.sb3{ background-color:skyblue; }
+	.searchbox .selectbox.sb4{ background-color:#99ff33; }
+	.searchbox .selectbox.s_icon{ width:50px; float:left; background-color:#6600ff; }
+	.searchbox .selectbox.s_icon a img{ width:100%; }
+	.searchbox .selectbox.s_search{ background-color:#999999; }
+
+	fieldset{ border:0 none; }
+	legend{ width:1px; height:1px; overflow:hidden; font-size:0; line-height:0; position:absolute; left:-9999px; }
+	.searchbox .manufacturer_type label{ display:inline-block; width:120px; font-weight:bold; }
+
+	/*visual*/
+	#visual{ position:relative; width:100%; height:600px; }
+	.visual_img img{ width:100%; }
+	.prev { width:10%; position:absolute; top:50%; left:12.5%; text-align:center; }
+	.next { width:10%; position:absolute; top:50%; right:12.5%; text-align:center; }
+	.prev img, .next img{ width:50%; }
+
+	/*section1*/
+	.section1.tab{ width:100%; height:300px; }
+	.section1.tab .container{ background-color:pink; }
+
+	/*section2*/
+	.section2.best_box{  width:100%; height:400px;  }/*section2*/
+	.row.r2{ height:50%; }
+	h3{ text-align:center; }
+	ul.hitbox.hb1{ width:100%; height:50%; float:left; }/*타이어 2개 광고*/
+	ul.hitbox.hb1 .hitbox_left.hl1{ width:25%; height:25%; float:left; }
+	/*타이어 2개 중 1개 왼쪽 광고*/
+	ul.hitbox.hb1 .a2.a21 .hitbox_right{ width:25%; height:25%; float:left; }/*스마트 타이어*/
+	ul.hitbox_icon li{}
+
+	ul.hitbox.hb1 .hitbox_left.hl2{ width:25%; height:50%; float:right; }
+	/*타이어 2개 중 1개 오른쪽 광고*/
+	ul.hitbox.hb1 .hitbox_right{ width:25%; height:25%; float:left; }
+
+	ul.hitbox.hb2{ width:100%; height:50%; overflow:hidden; }/*타이어 4개 광고*/
+	ul.hitbox.hb2 .hitbox_right{ float:left; }/*타이어 4개 중/1*/
+	ul.hitbox.hb2 .hitbox_right{ float:left; }/*타이어 4개 중/2*/
+	ul.hitbox.hb2 .hitbox_right{ float:left; }/*타이어 4개 중/3*/
+	ul.hitbox.hb2 .hitbox_right{ float:left; }/*타이어 4개 중/4*/
+
+	/*section3*/
+	.section3.menu_box{ width:100%; height:600px; }
+	.row.r3{ height:33%; overflow:hidden; }
+	.row.r4{ height:34%; overflow:hidden; }
+	.row.r5{ height:33%; overflow:hidden; }
+	
+	ul li.a3.a31{ width:33%; height:100%; float:left; }
+	ul li.a3.a32{ width:34%; height:100%; float:left; }
+	ul li.a3.a33{ width:33%; height:100%; float:left; }
+	
+
+	/*footer row.r6*/	
+	#footer{ height:675px; background-color:#ccc; }
+	#footer dl{ margin:0.5%; width:13%; background-color:pink; }/*상하좌우바깥쪽*/ /*계속 수정*/
+	#footer dt{ color:rgb(68, 68, 68); text-align:left; margin-bottom:20px; }
+	#footer dd{ font-size:85%; padding-top:5px;  }
+	#footer dd a{ color:#666; text-align:center; }
+	.a7{ width:150px; height:320px;/*height:320px;*/ float:left; }/*row.r6*/
+	
+	/*.row.r7 공식파트너 사진들*/	
+	.row.r7{ width:100%; height:57px; background-color:#f6f6f6; }
+	.row.r7 .container{ width:980px; background-color:black; }
+	.footer_middle{ overflow:hidden; width:980px; height:57px;  }
+	.footer_middle dt{ float:left; padding:0 20px; }/*공식파트너*/
+	.footer_middle dd.vertical{ float:left; margin-top:10px; }/**/
+	.footer_middle dd.vertical_d{ float:left; margin-top:20px; /*임시간격*/ }
+
+	/*.row.r8 사이버 감사실 블라블라~*/
+	.row.r8{ width:100%; height:53px;/*예비용*/  }
+	.row.r8 .link{ width:100%; overflow:hidden;}
+	.row.r8 .link li{ padding:2px 8px 2px 8px; float:left; font-size:85%; }
+	.row.r8 address{ float:left; width:100%; text-align:center; font-size:85%;  }
+	.row.r8 .link .r8_first{ margin-right:15px; }
+
+	/*.row.r9 이미지 스프라이트*/
+	.row.r9{ height:40px;/**/ }
+	.row.r9 .container{ width:980px; }
+	.row.r9 ul.icon_s{ height:40px;/**/ position:relative; }
+	
+	.icon_s li a:link,
+	.icon_s li a:visited{ display:block; width:40px; height:40px; text-indent:-9999px; background-position:0 0; }
+	.icon_s li a:hover, .icon_s li a:focus{ background-position:0 -40px; }/*칼라*/
+	
+	.row.r9 ul.icon_s li.icon{  }
+	.row.r9 ul.icon_s li.icon.c1{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c2{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c3{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c4{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c5{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c6{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c7{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c8{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c9{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c10{ float:left; width:98px; }
+	
+	/*이미지스프라이트*/
+	.icon_s li.icon.c1 a:link, .icon_s li.icon.c1 a:visited{ display:block; width:40%; height:39%; background-image:url("E:/포트폴리오/사이트_아이콘/logo_box_2.png"); }
+	.icon_s li.icon.c2 a:link, .icon_s li.icon.c2 a:visited{ display:block; width:42%; height:39%; background-image:url("E:/포트폴리오/사이트_아이콘/facebook_box_2.png"); }
+	.icon_s li.icon.c3 a:link, .icon_s li.icon.c3 a:visited{ display:block; width:42%; height:39%; background-image:url("E:/포트폴리오/사이트_아이콘/youtube_box_2.png"); }
+	.icon_s li.icon.c4 a:link, .icon_s li.icon.c4 a:visited{ display:block; width:42%; height:39%; background-image:url("E:/포트폴리오/사이트_아이콘/blog_box_2.png"); }
+	.icon_s li.icon.c5 a:link, .icon_s li.icon.c5 a:visited{ display:block; width:42%; height:39%; background-image:url("E:/포트폴리오/사이트_아이콘/post_box_2.png"); }
+	.icon_s li.icon.c6 a:link, .icon_s li.icon.c6 a:visited{ display:block; width:42%; height:39%; background-image:url("E:/포트폴리오/사이트_아이콘/t_box_2.png"); }
+	.icon_s li.icon.c7 a:link, .icon_s li.icon.c7 a:visited{ display:block; width:42%; height:39%; background-image:url("E:/포트폴리오/사이트_아이콘/aca_box_2.png"); }
+	.icon_s li.icon.c8 a:link, .icon_s li.icon.c8 a:visited{ display:block; width:42%; height:39%; background-image:url("E:/포트폴리오/사이트_아이콘/nature_box_2.png"); }
+	.icon_s li.icon.c9 a:link, .icon_s li.icon.c9 a:visited{ display:block; width:42%; height:39%; background-image:url("E:/포트폴리오/사이트_아이콘/day_box_2.png"); }
+	.icon_s li.icon.c10 a:link, .icon_s li.icon.c10 a:visited{ display:block; width:42%; height:39%; background-image:url("E:/포트폴리오/사이트_아이콘/stock.png"); }
+	
+  </style> 
+ </head>
+ <body>
+   <div id="wrapper">
+		<div id="header">
+			<div class="container">
+				<h1 class="logo">
+					<a href="#" title=""><img src="E:/포트폴리오/images/로고_4.png" alt="한국타이어 원래 로고"/></a>				
+				</h1><!--logo END-->
+				<ul class="info">
+					<li><a href="#" title="">로그인</a></li>
+					<li><a href="#" title="">회원가입</a></li>
+					<li><a href="#" title="">이벤트</a></li>
+					<li><a href="#" title="">HANKOOK UNIVERSE</a></li>
+				</ul><!--info END-->
+				<div class="gnbbox">
+					<h2 class="hidden">주메뉴</h2>
+					<ul class="gnb">
+						<li><a href="#" title="">타이어</a></li>
+						<li><a href="#" title="">서비스</a></li>
+						<li><a href="#" title="">모터스포츠</a></li>
+						<li><a href="#" title="">기업정보</a></li>
+						<li><a href="#" title="">채용</a></li>
+						<li><a href="#" title="">재무정보</a></li>
+						<li><a href="#" title="">지속가능경영</a></li>
+					</ul><!--gnb END-->
+				</div><!--gnbbox END-->
+				<div class="searchbox">
+					<h3 class="hidden">검색박스</h3>
+					<ul class="searchbox_type">
+						<li><a href="#" title="">차종으로 찾기</a></li>
+						<li><a href="#" title="">사이즈로 찾기</a></li>
+					</ul><!--searchbox_type END-->
+					<div class="selectbox sb1">
+						<form  action="#" method="post" id="manufacturer">			
+							<fieldset>
+							<legend>제조사</legend>
+								<label for="manufacturer_type">제조사 필수</label>
+								<select id="manufacturer_type" name="manufacturer_type">
+									<option value="manufacturer_type">[필수]타입 선택	</option><!--
+									--><option value="manufacturer1">현대</option><!--
+									--><option value="manufacturer2">기아</option>
+									<option value="manufacturer3">한국지엠</option>
+									<option value="manufacturer4">르노삼성</option>
+									<option value="manufacturer5">쌍용</option>
+									<option value="manufacturer6">쉐보레</option>
+									<option value="manufacturer7">아우디</option>
+									<option value="manufacturer8">렉서스</option>
+									<option value="manufacturer9">BMW</option>
+									<option value="manufacturer10">혼다</option>
+									<option value="manufacturer11">인피니티</option>
+									<option value="manufacturer12">폭스바겐</option>
+									<option value="manufacturer13">푸조</option>
+									<option value="manufacturer14">마세라티</option>
+									<option value="manufacturer15">볼보</option>
+									<option value="manufacturer16">클라이슬러</option>
+								</select>
+							</fieldset>
+						</form><!--manufacturer_type form END-->
+					</div><!--selectbox_sb1 END--><!--제조사 필수-->
+					<div class="selectbox sb2">
+						<form  action="#" method="post" id="model">			
+							<fieldset>
+							<legend>모델명</legend>
+								<label for="manufacturer_type">모델명 필수</label>
+								<select id="manufacturer_type" name="model_type">
+									<option value="model_type">[필수]타입 선택	</option>
+									<option value="mode1">-------</option>							
+								</select>
+							</fieldset>
+					</div><!--selectbox_2 END--><!--모델명 필수-->
+					<div class="selectbox sb3">
+						<a href="#" title="">옵션 선택</a>
+					</div><!--selectbox_3 END--><!--옵션 선택-->
+					<div class="selectbox sb4">
+						<a href="#" title="">사이즈 선택</a>
+					</div><!--selectbox_4 END--><!--사이즈 선택-->
+					<div class="selectbox s_icon">
+						<a href="#" title=""><img src="E:/포트폴리오/images/돋보기.png" alt="돋보기 아이콘" /></a>
+					</div><!--search_box END--><!--검색 아이콘-->
+					<div class="selectbox s_search">
+						<a href="#" title="">사이즈 확인</a>
+					</div><!--size_search END--><!--사이즈 확인-->
+				</div><!--searchbox END-->
+			</div><!--container END-->
+		</div><!--header END-->
+		<div id="visual">
+			<h3 class="hidden">visual</h3>
+			<p class="visual_img"><img src="E:/포트폴리오/images/hankook-main-visual5-1.jpg" alt="메인 사진" /></p>
+			<p class="prev"><a href="#" title=""><img src="E:/포트폴리오/images/prev.png" alt="prev 왼쪽" /></a></p>
+			<p class="next"><a href="#" title=""><img src="E:/포트폴리오/images/next.png" alt="next 오른쪽" /></a></p>
+		</div><!--visual END-->
+		<div class="section1 tab">
+			<div class="container">
+				<h3 class="hidden">탭 박스</h3>
+				<ul class="tab"><!--상단-->
+					<li><a href="#" title="">승용차</a></li><!--승용차 타이어-->
+					<li><a href="#" title="">SUV</a></li><!--SUV  타이어-->
+					<li><a href="#" title="">소형트럭</a></li><!--소형트럭 타이어-->
+					<li><a href="#" title="">트럭버스</a></li><!--트럭버스 타이어-->
+					<li><a href="#" title="">겨울용</a></li><!--겨울용 타이어-->
+				</ul><!--tab END-->
+				<p class="tabbox"></p><!--하단-->
+			</div><!--container END-->
+		</div><!--section1 tab END-->
+		<div class="section2 best_box">
+			<div class="container">
+				<h3>한국타이어 추천 아이템</h3>
+				<div class="row r1 hitbox hb1"><!--타이어 2개 광고 시작-->
+					<div class="a2 a21">
+						<div class="hitbox_left hl1">		
+							<p>Smart Plus</p>
+							<a href="http://www.t-station.co.kr/popup/tire/index_pop_tire.html" title="타이어규격안내">175/70R13H</a>
+							<p>경제적이고 합리적인 소비자를 위한 최적의 타이어</p>
+							<p><strong>46,400원</strong></p>
+						</div><!--hitbox_left hl1 END-->
+						<div class="hitbox_right">
+							<p><img src="E:/포트폴리오/images/H429_brndM_Smart-plus_s.gif" alt="Smart Plus" /></p><!--타이어 이름-->
+							<p><a href="" title="Smart plus 타이어 바로가기"><img src="E:/포트폴리오/images/H429_prdM_Smart plus_H429_120x120.jpg" alt="Smart Plus 타이어 사진" /></a></p><!--타이어 사진-->
+							<ul class="hitbox_icon">
+							<li><a href="#" title="Durability"><img src="" alt="" /></a></li>
+							<li><a href="#" title="Economy"><img src="" alt="" /></a></li>
+							</ul>
+						</div><!--hitbox_right END-->
+					</div><!--a2 a21 END-->
+					<div class="a2 a22">
+						<div class="hitbox_left hl2">
+							<p>enfren eco</p>
+							<p><a href="http://www.t-station.co.kr/popup/tire/index_pop_tire.html" title="타이어규격안내">155/70R14H XL</a></p>
+							<p>친환경, 저연비 타이어의 표준!! 앙프랑 에코</p>
+							<strong>71,720원</strong>
+						</div><!--hitbox_left hl2 END-->
+						<div class="hitbox_right">
+							<p><img src="E:/포트폴리오/images/H433_brndM_H433_brndM_s.gif" alt="앙프랑 에코" /></p><!--타이어 이름-->
+							<p><a href="" title=""><img src="E:/포트폴리오/images/H433_prdM_H433_product_120.jpg" alt="앙프랑 에코 타이어 사진" /></a></p><!--타이어 사진-->
+							<ul class="hitbox_icon">
+								<li><a href="#" title="Handing"><img src="" alt="" /></a></li>
+								<li><a href="#" title="Wet"><img src="" alt="" /></a></li>
+								<li><a href="#" title="Durability"><img src="" alt="" /></a></li>
+								<li><a href="#" title="Economy"><img src="" alt="" /></a></li>
+								<li><a href="#" title="Environment"><img src="" alt="" /></a></li>
+							</ul><!--hitbox_icon END-->
+						</div><!--hitbox_right END-->
+					</div><!--a2 a22 END-->
+				</div><!--row r1 hitbox hb1 END--><!--타이어 2개 광고 끝-->			
+				<div class="row r2 hitbox hb2"><!--타이어 4개 광고 시작-->
+					<div class="a4 a41 hitbox_right"><!--Kinergy ex 광고 시작-->
+						<p><img src="E:/포트폴리오/images/H308_brndM_H308_Kinergy_ex_s.gif" alt="" /></p><!--타이어이름-->
+						<p><a href="#" title="타이어규격안내">205/65R15H</a></p>
+						<p><a href="#" title=""><img src="E:/포트폴리오/images/H308_prdM_product120x120.jpg" alt="Kinergy ex" /></a></p><!--타이어 사진-->
+						<p><strong>125,400원</strong></p>
+						<ul class="hitbox_icon">
+							<li><a href="#" title="Economy"></a></li>
+						</ul><!--hitbox_icon END-->
+					</div><!--a4 a41 hitbox_right END-->
+					<!--Kinergy ex 광고 끝-->
+					<!--winter I'cept evo 광고 시작-->
+					<div class="a4 a42 hitbox_right">
+						<p><img src="E:/포트폴리오/images/W310_brndM_winter_evo_s.gif" alt="winter I'cept evo" /></p><!--타이어 제목-->
+						<p><a href="#" title="타이어규격안내 바로가기">195/55R15H XL</a></p>
+						<p>
+							<a href="#" title="">
+							<img src="E:/포트폴리오/images/W310_prdM_winter_evo_ W310_120x120.jpg" alt="winter I'cept evo 타이어 사진" /></a>
+						</p><!--타이어 사진-->
+						<p><strong>156,640원</strong></p>
+						<ul class="hitbox_icon">
+							<li><a href="#" title="Premium"></a></li>
+							<li><a href="#" title="Handing"></a></li>
+							<li><a href="#" title="Wet"></a></li>
+						</ul><!--hitbox_icon END-->
+					</div><!--a4 a42 hitbox_right END-->
+					<!--winter I'cept evo 광고 끝-->
+					<!--Dynapro HL2 광고 시작-->
+					<div class="a4 a43 hitbox_right">
+						<p><img src="E:/포트폴리오/images/RA35_brndM_Dynapro-HL2_s.gif" alt="Dynapro HL2" /></p><!--타이어 제목-->
+						<p><a href="#" title="타이어규격안내 바로가기">225/60R17H</a></p>
+						<p>
+							<a href="" title=""></a>
+							<img src="E:/포트폴리오/images/RA35_prdM_product120x120_2.jpg" alt="Dynapro HL2 타이어 사진" />
+						</p><!--타이어 사진-->
+						<p><strong>187,660원</strong></p>
+						<ul class="hitbox_icon">
+							<li><a href="#" title="Handing"></a></li>
+							<li><a href="#" title="Wet"></a></li>
+							<li><a href="#" title="Durability"></a></li>
+							<li><a href="#" title="Economy"></a></li>
+							<li><a href="#" title="environment"></a></li>
+						</ul><!--hitbox_icon END-->
+					</div><!--a4 a43 hitbox_right END-->
+					<!--Dynapro HL2 광고 끝-->
+					<!--Nordik 3000 광고 시작-->
+					<div class="a4 a44 hitbox_right">
+						<p><img src="E:/포트폴리오/images/W402_brndM_NORDIK-3000_s.gif" alt="" /></p><!--타이어 제목-->
+						<p><a href="#" title="타이어규격안내 바로가기">185/65R13T</a></p>
+						<p><img src="E:/포트폴리오/images/W402_prdM_product120x120_2.jpg" alt="Nordik 3000 타이어 사진" /></p><!--타이어 사진-->
+						<p><strong>84,700원</strong></p>
+						<ul class="hitbox_icon">
+							<li><a href="#" title="Handing"></a></li>
+							<li><a href="#" title="Wet"></a></li>
+						</ul><!--hitbox_icon END-->
+					</div><!--a4 a44 hitbox_right END-->
+					<!--Nordik 3000 광고 끝-->
+				</div><!--row r2 hitbox hb2 END--><!--타이어 4개 광고 끝-->
+			</div><!--container END-->
+		</div><!--section2 tirebest_box-->
+		<div class="section3 menu_box">
+			<div class="container">
+				<div class="row r3">
+					<div class="a3 a31">
+						<a href="#" title="">
+							<strong>판매점, A/S지정점 찾기</strong>
+							<span>누구나 한구구타이어 판매점의 단골의 되실 수 있습니다.</span>
+							<span>바로가기</span>
+						</a>
+					</div><!--a3 a31 END-->
+					<div class="a3 a32">
+						<a href="#" title="">
+							<strong>마모수명 보증서 등록</strong>
+							<span>보증거리만큼 안심하고 사용하실 수 있습니다.</span>
+							<span>바로가기</span>
+						</a>
+					</div><!--a3 a32 END-->
+					<div class="a3 a33">
+						<a href="#" title="">
+							<strong>타이어 제조주차 바로가기</strong>
+							<span>내 타이어의 제조주차 확인 방법을 알려드립니다.</span>
+							<span>바로가기</span>
+						</a>
+					</div><!--a3 a33 END-->
+				</div><!--row r3 END-->
+				<div class="row r4">
+					<div class="a3 a31">
+						<a href="#" title="">
+							<strong>에니저 소비효율 등급제도</strong>
+							<span>어네지 소비효율 등급제도를 소개해드립니다.</span>
+							<span>바로가기</span>
+						</a>
+					</div><!--a3 a31 END-->
+					<div class="a3 a32">
+						<a href="#" title="">
+							<strong>티스테이션 바로가기</strong>
+							<span>한국타이어 공식 판매매장 티스테이션입니다.</span>
+							<span>바로가기</span>
+						</a>
+					</div><!--a3 a32 END-->
+					<div class="a3 a33">
+						<a href="#" title="">
+							<strong>타이어 지식채널</strong>
+							<span>어렵기만 한 타이어의 대한 지식 쉽게 알려드립니다.</span>
+							<span>바로가기</span>
+						</a>
+					</div><!--a3 a33 END-->
+				</div><!--row r4 END-->
+				<div class="row r5">
+					<div class="a3 a31">
+						<a href="#" title="">
+							<strong>공지/뉴스</strong>
+							<span></span>
+							<span>바로가기</span>
+						</a>
+					</div><!--a3 a31 END-->
+					<div class="a3 a32">
+						<a href="#" title="">
+							<strong>윤리경영</strong>
+							<span>신뢰와 사랑을 받는 기업을 만들기 위해 노력하겠습니다.</span>
+							<span>바로가기</span>
+						</a>
+					</div><!--a3 a32 END-->
+					<div class="a3 a33">
+						<a href="#" title="">
+							<strong>채용소식</strong>
+							<span>2017년 상반기 한국타이어 신입/경력사원을 모집합니다.</span>
+							<span>바로가기</span>
+						</a>
+					</div><!--a3 a33 END-->
+				</div><!--row r5 END-->
+			</div><!--container END-->
+		</div><!--section3 menu_box-->
+		<div id="footer">
+			<div class="row r6">
+				<div class="container">
+					<dl class="a7 a71">
+						<dt>타이어</dt>
+						<dd><a href="#" title="승용차 타이어 바로가기">승용차 타이어</a></dd>
+						<dd><a href="#" title="소형트럭 타이어 바로가기">소형트럭 타이어</a></dd>
+						<dd><a href="#" title="트럭/버스 타이어 바로가기">트럭/버스 타이어</a></dd>
+						<dd><a href="#" title="겨울용 타이어 바로가기">겨울용 타이어</a></dd>
+						<dd><a href="#" title="타이어 검색 바로가기">타이어 검색</a></dd>
+						<dd><a href="#" title="리테일 네트워크 바로가기">리테일 네트워크</a></dd>
+					</dl><!--a7 a71 END-->
+					<dl class="a7 a72">
+						<dt>서비스</dt>
+						<dd><a href="#" title="타이어효율등급제 바로가기">타이어효율등급제</a></dd>
+						<dd><a href="#" title="전문지 성능 평가 바로가기">전문지 성능 평가</a></dd>
+						<dd><a href="#" title="무상보증등록 바로가기">무상보증등록</a></dd>
+						<dd><a href="#" title="고객 서비스 바로가기">고객 서비스</a></dd>
+						<dd><a href="#" title="무상점검 서비스 바로가기">무상점검 서비스</a></dd>
+						<dd><a href="#" title="타이어 A to Z 바로가기">타이어 A to Z</a></dd>
+						<dd><a href="#" title="드라이빙 팁 바로가기">드라이빙 팁</a></dd>
+						<dd><a href="#" title="고객&lt;A 바로가기">고객 Q&amp;A</a></dd>
+					</dl><!--a7 a72 END-->
+					<dl class="a7 a73">
+						<dt>모터스포츠</dt>
+						<dd><a href="#" title="한국타이어 모터스포츠 바로가기">한국타이어 모터스포츠</a></dd>
+						<dd><a href="#" title="경기 일정">경기 일정</a></dd>
+						<dd><a href="#" title="경주용 타이어">경주용 타이어</a></dd>
+						<dd><a href="#" title="CJ대한통운 슈퍼레이스 챔피언십">CJ대한통운 슈퍼레이스 챔피언십</a></dd>
+						<dd><a href="#" title="코리아 스피드 페스티벌">코리아 스피드 페스티벌</a></dd>
+						<dd><a href="#" title="독일 투어링카 마스터즈(DTM)">독일 투어링카 마스터즈(DTM)</a></dd>
+						<dd><a href="#" title="Audi Sport TT컵">Audi Sport TT컵</a></dd>
+						<dd><a href="#" title="FLA F3 유로피언 챔피언십">FLA F3 유로피언 챔피언십</a></dd>
+						<dd><a href="#" title="포뮬러 드리프트">포뮬러 드리프트</a></dd>
+						<dd><a href="#" title="24H 시리즈">24H 시리즈</a></dd>
+						<dd><a href="#" title="파이키피크 인터내셔널 힐 클라임">파이키피크 인터내셔널 힐 클라임</a></dd>
+						<dd><a href="#" title="경주용 타이어 바로가기">경주용 타이어</a></dd>
+					</dl><!--a7 a73 END-->
+					<dl class="a7 a74">
+						<dt>기업정보</dt>
+						<dd><a href="#" title="회사소개 바로가기">회사소개</a></dd>
+						<dd><a href="#" title="전략 바로가기">전략</a></dd>
+						<dd><a href="#" title="브랜드 바로가기">브랜드</a></dd>
+						<dd><a href="#" title="기술철학 바로가기">기술철학</a></dd>
+						<dd><a href="#" title="미디어센터 바로가기">미디어센터</a></dd>
+					</dl><!--a7 a74 END-->
+					<dl class="a7 a75">
+						<dt>채용</dt>
+						<dd><a href="#" title="Proactive Culture 바로가기">Proactive Culture</a></dd>
+						<dd><a href="#" title="Proactive People 바로가기">Proactive People</a></dd>
+						<dd><a href="#" title="인사 제도 바로가기">인사 제도</a></dd>
+						<dd><a href="#" title="채용 안내 바로가기">채용 안내</a></dd>
+						<dd><a href="#" title="입사 지원 바로가기">입사 지원</a></dd>
+					</dl><!--a7 a75 END-->
+					<dl class="a7 a76">
+						<dt>재무정보</dt>
+						<dd><a href="#" title="재무하이라이트 바로가기">재무하이라이트 바로가기</a></dd>
+						<dd><a href="#" title="재무현황 바로가기">재무현황 바로가기</a></dd>
+						<dd><a href="#" title="주식현황 바로가기">주식현황</a></dd>
+						<dd><a href="#" title="투자자보고서 바로가기">투자자보고서</a></dd>
+						<dd><a href="#" title="IR 서비스 바로가기">IR 서비스</a></dd>
+					</dl><!--a7 a76 END-->
+					<dl class="a7 a77">
+						<dt>지속가능경영</dt>
+						<dd><a href="#" title="CSR 위원회 바로가기">CSR 위원회</a></dd>
+						<dd><a href="#" title="정책 바로가기">정책</a></dd>
+						<dd><a href="#" title="이해관계자 바로가기">이해관계자</a></dd>
+						<dd><a href="#" title="중요성 평가 바로가기">중요성 평가</a></dd>
+						<dd><a href="#" title="주요활동 바로가기">주요활동</a></dd>
+						<dd><a href="#" title="CSR 보고서 바로가기">CSR 보고서</a></dd>
+					</dl><!--a7 a77 END-->
+				</div><!--container END-->
+			</div><!--row r6 END-->
+			<div class="row r7">
+				<div class="container">
+					<dl class="footer_middle">
+						<dt class="vertical_d"><a><img src="E:/포트폴리오/images/tit_footer_carousel.png" alt="공식파트너" /></a></dt>
+						<dd class="vertical"><a><img src="E:/포트폴리오/images/img_thumb_real_madrid.gif" alt="레알" /></a></dd>
+						<dd class="vertical"><a><img src="E:/포트폴리오/images/img_thumb_dtm.gif" alt="DTM" /></a></dd>
+						<dd class="vertical"><a><img src="E:/포트폴리오/images/img_thumb_europa.gif" alt="유로파" /></a></dd>
+					</dl><!--footer_middle END-->
+				</div><!--container END-->
+			</div><!--row r7 END-->
+			<div class="row r8">
+				<div class="container">
+					<ul class="link">
+						<li class="r8_first"><a href="#" title="">사이버감사실</a></li>
+						<li><a href="#" title="">뉴스레터 신청</a></li>
+						<li><a href="#" title="">채용</a></li>
+						<li><a href="#" title="">지점안내</a></li>
+						<li><a href="#" title="">자주하는 질문</a></li>
+						<li><a href="#" title="">찾아오시는 길</a></li>
+						<li><a href="#" title="">사이트맵</a></li>
+						<li><a href="#" title="">이용약관</a></li>
+						<li><a href="#" title="">개인정보처리방법</a></li>
+						<li><a href="#" title="">이메일무단수집거부</a ></li>
+						<li><a href="#" title="">Hankook Universe</a></li>	
+					</ul><!--link END-->
+					<address>고객만족센터 : 080-022-8272( 수입차 타이어 상담 : 1577-0999)</address>
+					<address>Copyright &copy; Hankook Tire. All Rights Reserved.</address>
+				</div><!--container END-->
+			</div><!--row r8 END-->
+			<div class="row r9">
+				<div class="container">
+					<ul class="icon_s">
+						<li class="icon c1"><a href="#" title="한국타이어 바로가기"><img src="E:/포트폴리오/사이트_아이콘/logo_box.png" alt="한국타이어 로고" /></a></li><!--한국타이어 메인로고-->
+						<li class="icon c2"><a href="#" title="한국타이어 공식 facebook 바로가기"><img src="E:/포트폴리오/사이트_아이콘/facebook_box.png" alt="facebook" /></a></li><!--한국타이어 공식 fackbook-->
+						<li class="icon c3"><a href="#" title="한국타이어 공식 Youtube"><img src="E:/포트폴리오/사이트_아이콘/youtube_box.png" alt="youtube" /></a></li><!--한국타이어 공식 Youtube-->
+						<li class="icon c4"><a href="#" title="한국타이어 공식 Blog 바로가기"><img src="E:/포트폴리오/사이트_아이콘/blog_box.png" alt="naver blog" /></a></li><!--한국타이어 공식 Blog-->
+						<li class="icon c5"><a href="#" title="한국타이어 공식 포스트 바로가기"><img src="E:/포트폴리오/사이트_아이콘/post_box.png" alt="posting" /></a></li><!--한국타이어 공식 포스트-->
+						<li class="icon c6"><a href="#" title="티스테이션 바로가기"><img src="E:/포트폴리오/사이트_아이콘/t_box.png" alt="t-station" /></a></li><!--티스테이션 바로가기-->
+						<li class="icon c7"><a href="#" title="아카데미 하우스 바로가기"><img src="E:/포트폴리오/사이트_아이콘/aca_box_2.png" alt="아카데미" /></a></li><!--한국타이어 아카데미 하우스-->
+						<li class="icon c8"><a href="#" title="한국타이어 환경방침 바로가기"><img src="E:/포트폴리오/사이트_아이콘/nature_box.png" alt="환경방침" /></a></li><!--한국타이어 환경방침-->
+						<li class="icon c9"><a href="#" title="타이어 점검 예약 바로가기"><img src="E:/포트폴리오/사이트_아이콘/day_box.png" alt="타이어점검" /></a></li><!--타이어 점검 예약-->
+						<li class="icon c10"><a href="#" title="한국타이어 주식현황 바로가기"><img src="E:/포트폴리오/사이트_아이콘/stock.png" alt="한국타이어 주식현황" /></a></li><!--한국타이어 주식현황-->
+					</ul><!--icon_box END-->
+				</div><!--container END-->
+			</div><!--row r9 END-->
+		</div><!--footer END-->
+   </div><!--wrapper END-->
+ </body>
+</html>
+<!-- https://validator.kldp.org/check --> 

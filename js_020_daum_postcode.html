@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>tmpt</title>
+		<style>
+		/* reset.css  */
+		*{  margin:0; padding:0; }     
+		li{ list-style-type:none; } 
+		img{ border:0 none; }
+
+		/* basc.css  */
+		body{  font-family:"Malgun Gothic" , dotum , sans-serif; font-size:90%; color:#000;}
+		a:link, a:visited{  color:#000;   text-decoration:none; }
+		a:hover, a:focus{  color:#f00;   text-decoration:underline; }
+
+		.basic{ width:80%; margin:50px auto; padding:50px; background-color:white; border-top:5px solid #ddd; }
+		h3{ text-transform:uppercase; text-indent:1em; border-left:10px solid darkgoldenrod; margin:10px 0; }	
+
+		label{ display:inline-block; text-align:left; width:12%; text-transform:uppercase; }
+		input{ width:24%; background-color:white; }
+
+		input[type="button"], input[type="submit"]{ width:15%; padding:5px; background-color:crimson; border-radius:20px; border:0 none; color:white; margin:0 5px; }
+		#useraddress, #useraddress2{ width:80%; }
+		#useraddress,  #useraddress2{ margin:1% 12.5%; }
+
+
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+		<script>
+			// #postcode 버튼을 클릭하면 우편번호를 검색합니다. 알림창 띄우기
+			// 이벤트 대상 : $("#postcode")
+			// 이벤트 : click
+			// 이벤트핸들러 : alert();
+			$(function(){
+				$("#postcode").click(function(){
+					new daum.Postcode({
+						oncomplete: function(data) {
+							$("#post1").val( data.postcode1 ); //우편번호 앞자리 : date.postcode1
+							$("#post2").val( data.postcode2 );//우편번호 뒷자리 : date.postcode2
+							$("#useraddress").val( data.address );//상세주소1 : data.address
+							$("#useraddress2").focus();//상세주소2 : 커서가게 만들기		focus()
+						}
+					}).open();
+				});//#postcode
+			});//function()
+
+		</script>
+ 
+	</head>
+	<body>
+		<div class="basic">
+			<h3>JOIN</h3>
+			<p>
+				<label for="post1">우편번호</label>
+				<input type="text" id="post1" name="post1" title=""/>-<input type="text" id="post2" name="post2" title="우편번호 뒷자리"/>
+				<input type="button" value="우편번호검색" id="postcode"/>
+  			</p>
+			<!---->
+			<p class="br_bottom">
+				<label for="useraddress">상세주소</label>
+				<input type="text" id="useraddress" name="useraddress"><input type="text" id="useraddress2" name="useraddress2" title="상세주소 두 번째 자리"/>
+			</p>
+		</div><!--basic-->
+	</body>
+</html>

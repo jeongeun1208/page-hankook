@@ -1,0 +1,811 @@
+		.popWrap{ width:300px; height:300px; /*border-radius:50%;*/ position:fixed; top:20%; left:10%; background-color:white; overflow:hidden; border:5px solid #123; z-index:1000; }
+		.popWrap span.title{ font-size:25px; text-align:center; font-weight:bold; padding:10px 0; }
+		.popWrap .popimg{ text-align:center; /*height:100px;*/ height:136px; }
+		.popWrap .popdesc{ padding:10px; text-align:center; font-size:80%; }
+		.popWrap .popdesc span{ display:block; font-size:90%; }
+		
+		.popWrap .qrcode{ padding:10px; text-align:center; }
+		.popWrap .qrcode img{ width:50%; }
+
+		.popWrap .todayclose{ text-align:center; font-size:66%; color:#fff; background-color:#012602; padding:10px; }
+		.popWrap .todayclose a:link, .popWrap .todayclose a:visited{ color:#efefef; font-weight:bold; }
+		.popWrap .todayclose a:hover, .popWrap .todayclose a:focus{ color:#aaa; font-weight:bold; }
+
+
+
+	.skip_nav{ width:100%; }
+	.skip_nav li{}
+	.skip_nav li a:link, .skip_nav li a:visited{ width:100%; padding:20px; display:block; text-align:center; background-color:#012602;  
+													color:white; font-weight:bold; position:absolute; top:-100px; left:0; z-index:100; }
+	.skip_nav li a:focus, 
+	.skip_nav li a:active { top:0; }
+
+	#wrapper{ width:100%; height:100%; /*color:#858585;*/ }/*반응형할 때 꼭 넣어야하는 것>> 부모랑 자식에 height:100%;*/
+
+
+	.container{ width:980px; height:100%; margin:auto;  }
+	.hidden{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+	.tab{  }/*section1*/
+	.hit_box{   }/*section2*/
+	.menu_box{  }/*section3*/
+
+	.row{ width:100%; height:100%; overflow:hidden; }
+
+	/*#header{ width:100%; height:115px;}*/
+	#header{ position:relative; width:100%; height:100px; z-index:3;/*ie7 버그*/ }
+	#header .container{ position:relative; border-bottom:5px solid #012602; }
+
+	/*.header logo*/
+	.logo{ width:176px; height:32px; position:absolute; top:0; left:0;  }
+	.logo a{ display:block; width:100%; height:32px; }
+	.logo a img{ width:100%; }
+
+	.info{ width:100%; text-align:right; padding-top:10px; }
+	.info li{ display:inline; }
+	.info li a{ color:white; width:100px; height:50px; padding:0 8px;/*간격*/ color:black; background:url("../images/bg_border.gif") no-repeat 100% 4px; font-size:85%; }
+
+	/*gnbbox*/
+	.gnbbox{ width:800px; height:50px; margin-left:185px;/*로고사이즈 만큼하려고 했으나.......*/ margin-top:15px; }
+	.gnb{ width:804px;/*980-176*/ height:50px; }
+	.gnb li{ width:100px; height:50px;/*수정다시*/ float:left; }
+	.gnb > li > a:link, .gnb > li > a:visited{ color:black; display:block; width:100%; height:50px; text-align:center; font-weight:bold; line-height:50px;  background:url("../images/bg_border.gif") no-repeat 100% 20px; }
+	.gnb > li > a:hover, .gnb > li > a:focus{ border-bottom:white; border-bottom:#021602; color:black; display:block; width:100%; height:50px; text-align:center; font-weight:bold; line-height:50px;  }
+
+	.gnb:after{ clear:both; content:""; display:block; }/*:은 가상으로 ~을 해라*//*clearfix*/
+
+	.gnb li.gnb_fisrt{ margin-left:80px; }
+	.gnb li.gnb_last { width: 107px; margin-left:7px; }
+
+	.gnb_sub{ font-size:87%; }
+	.gnb .gnb_sub{ position:absolute; z-index:5; }/*가로버젼*/
+
+	.gnb_sub li{ text-align:center; height:50px; line-height:50px; }
+	.gnb_sub li a:link, .gnb_sub li a:visited{ display:block; background-color:#556b2f; color:white; height:50px; }
+	.gnb_sub li a:focus, .gnb_sub li a:hover{ display:block; background-color:#021602; color:white; height:50px; }
+	
+	.gnb_sub a:after{ content:""; display:block; width:0; height:0; position:absolute; right:40px; top:-20px; border:10px solid #556b2f;
+							border-color:transparent transparent #556b2f transparent; }
+
+
+	.gnb_sub.one{ width:10%; height:50px; }
+	.gnb_sub.one a{ width:95%; }
+	.gnb_sub.two{ width:10%; height:50px; }
+	.gnb_sub.two a{ width:95%; }
+	.gnb_sub.three{ width:10%; height:50px; }
+	.gnb_sub.three a{ width:95%; }
+	.gnb_sub.four{ width:10%; height:50px; }
+	.gnb_sub.four a{ width:95%; }
+	.gnb_sub.five{ width:10%; height:50px; }
+	.gnb_sub.five a{ width:95%; }
+	.gnb_sub.six{ width:10%; height:50px; }
+	.gnb_sub.six a{ width:95%; }
+	.gnb_sub.seven{ width:11%; height:50px; }
+	.gnb_sub.seven a{ width:107%; }
+	
+
+	
+	/*searchbox*/
+	.searchbox{ width:980px; height:50px; border:5px solid #021602; background-color:white; margin:0 auto;  }	
+	.hidden{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }/*h3 숨기기*/
+	.searchbox_type{ width:29%; height:50px; float:left; background-color:white; line-height:50px; float:left;}/*float:left 안 하면 오른쪽이 안 올라옴*/
+	.searchbox_type li{ float:left; font-size:16px; text-align:center; width:50%;  }/*차종, 사이즈 선택*/
+	.searchbox_type li a{ background-color:#021602; display:block; color:white; }
+	.selectbox{ margin:.5%; width:16%; height:30px; line-height:50px; background-color:white; text-align:center; float:left; }	
+	.searchbox .selectbox.sb1{ display:inline-block;/*이건 생각해봐야 해*/ }
+	.searchbox .selectbox.sb2{  }
+	.searchbox .selectbox.sb3{  }
+	.searchbox .selectbox.sb4{ text-align:center;  }
+	.searchbox .selectbox.s_icon{  width:4%;  height: 80%; float: left;  text-align: center;  }
+	.searchbox .selectbox.s_icon a img{ width:100%; }
+	.searchbox .selectbox.s_search{ background-color:white; width:11%; line-height:20px; text-align:center; }
+	.searchbox .selectbox.s_search a{ display:block; width:100%; height:20px; border:1px solid #ccc; background-color:#021602; color:white; border-radius:10px; margin-top:10%; }/*계속 수정*/
+
+	.searchbox fieldset{ border:0 none; }
+	.searchbox legend{ width:1px; height:1px; overflow:hidden; font-size:0; line-height:0; position:absolute; left:-9999px; }
+	.searchbox .manufacturer_type label{ display:inline-block; width:120px; font-weight:bold; }
+	.searchbox label{ font-size:0; line-height:0;  }
+
+	/*visual*/
+	#visual{ width:100%; height:22%; }
+	.visual_img{ width:100%; height:70%; overflow:hidden; position:relative; }
+	.visual_img > li{ width:100%; height:80%; float:left; }
+	
+	.visual_train{ width:9600px; }
+	.visual_train > li{ width:1920px; height:80%; float:left; }
+
+	.visual_img img{ width:100%; }
+	
+	.prev { width:10%; position:absolute; top:50%; left:12.5%; text-align:center; }
+	.next { width:10%; position:absolute; top:50%; right:12.5%; text-align:center; }
+	.prev img, .next img{ width:50%; }
+
+
+	.visual_control{ position:absolute; left:0; bottom:15%; width:100%; height:12px; text-align:center; }
+	.visual_control li{ display:inline; }
+	.visual_control li a, .visual_control li a:visited		
+	{ display:inline-block; width:20px; height:20px; border-radius:15px; background-color:#999; font-size:0; margin-right:10px; }
+	.visual_control li a.on{ background-color:#F2A8B6; }
+
+	.timer_control_btn{ position:absolute; bottom:77px; right:850px; z-index:5; }
+	.timer_control_btn a{ width:28.5px; height:28px; display:block; text-indent:-9999px; background:url("../images/stop(2).png") no-repeat 0px; }
+
+		.sliding_box{ width:980px; height:408px; position:relative; }/*기준점*/
+		.sliding_overflow{ width:100%;/*980px*/ height:100%; overflow:hidden; }/* 한 칸만 보이게 설정 */
+
+		.visual_train{ width:500%;/*980*5*/ height:100%; }/* 기차칸은 그림 여러개 묶음 사이즈 */
+		.visual_train li{ width:20%;/*1/5*/ height:100%; float:left; position:relative; }/* 배경처리 */
+		.visual_train li.li1{ background:url("../images/hankook-main-visual5-1.jpg") no-repeat center; background-size:cover; }
+		.visual_train li.li2{ background:url("../images/Main_kor_170102_visual.jpg") no-repeat; background-size:cover; }	
+		.visual_train li.li3{ background:url("../images/kor_main_02.jpg") no-repeat center; background-size:cover; }	
+		.visual_train li.li4{ background:url("../images/kor_main_04.jpg") no-repeat center; background-size:cover; }	
+		.visual_train li.li5{ background:url("../images/kor_main_05.jpg") no-repeat center; background-size:cover; }	
+
+
+
+
+
+
+	/*section1*//*http://www.w3schools.com/howto/howto_js_tabs.asp*/
+	.section1.tab{ width:980px; height:50px; margin:0 auto; position:relative; }
+	.section1.tab:after{ clear:both; content:""; display:block; }/*:은 가상으로 ~을 해라*//*clearfix*/
+
+	ul.tabbox_top{ overflow:hidden; border:1px solid #ccc; height:50px; width:99.5%; }
+	ul.tabbox_top > li{ float:left; border-bottom:5px solid #021602; width:20%; height:92%; line-height:50px; }
+	ul.tabbox_top li a:link, ul.tabbox_top li a:visited{ display:block; color:#021602; height:100%; text-align:center; text-decoration:none; font-size:17px; 
+																			font-weight:bold; transition:0.3s; }
+	ul.tabbox_top > li > a:hover, 
+	ul.tabbox_top > li > a:focus, 
+	ul.tabbox_top > li > a.selected{ background-color:#021602; border-bottom:4px solid #021602; color:white;  }
+	/*, .tab > li > a.selected*/
+
+	ul.tabbox_top li a:hover, ul.tabbox_top li a:focus{ background-color:#021602; color:white;  }
+	/*ul.tabbox_top li.tabtop_selected a:link, ul.tabbox_top li.tabtop_selected a:visited{ background-color:#021602; color:white; }
+
+	p.tabbox_bottom img{ width:100%; }*/
+
+	
+
+	.tabbox_top .panel{ width:100%; height:64.5%; position:absolute; top:6%; left:1.5%; margin:0px auto; }
+	.tabbox_top #tab1{ background:url("../images/hankook-tires-ventus-s2-as-banner-02.jpg") no-repeat center; margin:0 auto; background-size: contain; }
+	/*승용차*/
+	.tabbox_top #tab2{ background:url("../images/hankook-tires-ventus-s2-as-banner-01.jpg") no-repeat center; margin:0 auto; background-size: contain; }
+	/*suv*/
+	.tabbox_top #tab3{ background:url("../images/hankook-tires-vantra-lt-banner-02.jpg") no-repeat center; margin:0 auto; background-size: contain; }
+	/*소형트럭*/
+	.tabbox_top #tab4{ background:url("../images/hankook-tires-smartflex-ah35-banner-02.jpg") no-repeat center; margin:0 auto; background-size: contain; }
+	/*트럭버스*/
+	.tabbox_top #tab5{ background:url("../images/hankook-tires-winter-icept-iz2a-banner-02.jpg") no-repeat center; margin:0 auto; background-size: contain; }
+	/*겨울용*/
+
+
+
+
+
+	/*section2*/ /*계속 수정*/
+	.row.r1{	}
+	.row.r2{  }
+
+	.section2.hit_box{ width:100%; height:45%; overflow:hidden; margin:25px auto; /*적절한 사이즈 찾을 때 까지 수정바람.*/ }/*section2*/
+	
+	/*
+	.a2{ width:50%; height:100%; float:left; }
+	.a4{ width:25%; height:100%; float:left; }
+	*/
+
+	/*반응형 주의바람*/
+	.hitbox.hb1{ width:100%; height:300px; float:left; }/*타이어 2개 광고*/
+	.hitbox.hb2{ width:100%; height:350px; float:left; }/*타이어 4개 광고*/
+
+	.a2{ height:100%; float:left; }
+	.a2.a21{ }
+	.a2.a22{  }
+	/*타이어 2개 중 1개 왼쪽 광고*/
+	.a2.a21{ width:48.5%; height:90%; overflow:hidden; margin-right:1.2%; border-radius:5px; border:2px solid #ccc; }
+	.a2.a21 .hitbox_left.hl1{ width:48.5%; height:95%; float:left; border-right:1px solid #021602; text-align:justify; padding-top:2%; padding-left:2%; background-color:#021602; color:white; }
+	.a2.a21 .hitbox_right.hl1{ width:48.5%; height:95%; float:right; text-align:center; padding-top:2%;  }/*스마트 타이어*/
+
+	.a2.a21 .hitbox_left.h1 .index_pop_tire{ border:2px solid white; }
+
+	/*타이어 2개 중 2개 오른쪽 광고*/
+	.a2.a22{ width:48.5%; height:90%; overflow:hidden; border-radius:5px; border:2px solid #ccc; }
+	.a2.a22 .hitbox_left.hl2{ width:48.5%; height:95%; float:left; border-right:1px solid #021602; padding-top:2%; padding-left:2%; background-color:#021602; color:white; }
+	.a2.a22 .hitbox_right.hl2{ width:48.5%; height:95%; float:right; text-align:center; padding-top:2%; }
+
+	.section2 h3{ text-align:center; margin-bottom:2%; }
+	strong.price{ font-size:140%; }
+	strong.left_price{ font-size:140%; padding-left:3%; }
+
+	.left_title{ font-size:160%; font-weight:bold; margin-bottom:20px; text-align:center; }
+	.index_pop_tire{ border:2px solid #021602; background-color:#021602; border-radius:10px; }
+	.index_pop_tire_left{ /*border:2px solid white;*/ background-color:white; border-radius:10px; padding:2%; }
+	p .index_pop_tire{ color:white; margin:4px;}
+	.left_maintext{ height:100px; padding-left:3%; padding-top:8%; }
+
+
+	/*타이어 4개 광고*/	
+	/*타이어 4개 중/1*/
+	/*타이어 4개 중/2*/
+	/*타이어 4개 중/3*/
+	/*타이어 4개 중/4*/
+	.a4{ width:25%; height:95%; float:left; }
+	.a4 .hitbox_right{ width:95%; height:95%; float:left;  border-radius:5px; border:2px solid #ccc; text-align:center; padding-top:2%; }
+	.hitbox_right .price_t{ display:block; height:30px; }
+	/*.hitbox.hb2 .hitbox_right{ width:25%; height:100%; float:left;  }*/
+
+
+	
+	.hitbox_icon li:hover .icon_sub{ display:block; }/*일다ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㄴ*/
+	.icon_sub{ display:none; width:75px; padding:3px; background-color:#021602; border:1px solid #021602; position:absolute; top:55px; }
+	.icon_sub li a{ color:white; }
+
+	/*.icon_sub li a:hover:after, .icon_sub li a:focus:after{ content:""; display:block; width:0px; height:0px; position:absolute; left:0px; top:35px; border:10px solid #021602;
+							border-color:transparent transparent #021602 transparent;  }*/
+	
+
+	/*전체 이미지스프라이트 가로방향 배치 css*/
+	ul.hitbox_icon{ position:relative; padding-top:20px; border-top:1px dashed #ccc; border-width:3px; width:80%; top:0; left:10%; z-index:1; }
+	ul.hitbox_icon li.small.i1 { float:left; width:25px; }
+	ul.hitbox_icon li.small.i2 { float:left; width:25px; }
+	ul.hitbox_icon li.small.i3 { float:left; width:25px; }
+	ul.hitbox_icon li.small.i4 { float:left; width:25px; }
+	ul.hitbox_icon li.small.i5 { float:left; width:25px; }
+	ul.hitbox_icon li.small.i6 { float:left; width:25px; }
+	ul.hitbox_icon li.small.i7 { float:left; width:25px; }	
+	ul.hitbox_icon li.small.i8 { float:left; width:25px; }	
+	ul.hitbox_icon li.small.i9 { float:left; width:25px; }	
+	ul.hitbox_icon li.small.i10 { float:left; width:25px; }	
+	ul.hitbox_icon li.small.i11 { float:left; width:25px; }	
+	
+
+
+
+
+	.hitbox_icon li a.icon_a:link, .hitbox_icon li a.icon_a:visited{ display:block; width:24px; height:50px; text-indent:-9999px; background-position:0 0;  }
+	
+	.hitbox_icon li a.icon_a:hover, .hitbox_icon li a.icon_a:focus{ background-position:0 -25px; background-color:#021602; }	/*a 태그에 클래스를 줘서 따로 인삭하게 함.*/
+
+	.hitbox_icon li.small.i1 a.icon_a:link, .hitbox_icon li.small.i1 a.icon_a:visited{ display:block; width:24px; height:25px; background-image:url("../images/icon_all_season.png"); }
+	.hitbox_icon li.small.i2 a.icon_a:link, .hitbox_icon li.small.i2 a.icon_a:visited{ display:block; width:24px; height:25px; background-image:url("../images/icon_comfort.png"); }
+	.hitbox_icon li.small.i3 a.icon_a:link, .hitbox_icon li.small.i3 a.icon_a:visited{ display:block; width:24px; height:25px; background-image:url("../images/icon_dry.png"); }
+	.hitbox_icon li.small.i4 a.icon_a:link, .hitbox_icon li.small.i4 a.icon_a:visited{ display:block; width:24px; height:25px; background-image:url("../images/icon_eco.png"); }
+	.hitbox_icon li.small.i5 a.icon_a:link, .hitbox_icon li.small.i5 a.icon_a:visited{ display:block; width:24px; height:25px; background-image:url("../images/icon_ice.png"); }
+	.hitbox_icon li.small.i6 a.icon_a:link, .hitbox_icon li.small.i6 a.icon_a:visited{ display:block; width:24px; height:25px; background-image:url("../images/icon_noise.png"); }
+	.hitbox_icon li.small.i7 a.icon_a:link, .hitbox_icon li.small.i7 a.icon_a:visited{ display:block; width:24px; height:25px; background-image:url("../images/icon_snow.png"); }
+	.hitbox_icon li.small.i8 a.icon_a:link, .hitbox_icon li.small.i8 a.icon_a:visited{ display:block; width:24px; height:25px; background-image:url("../images/icon_summer.png"); }
+	.hitbox_icon li.small.i9 a.icon_a:link, .hitbox_icon li.small.i9 a.icon_a:visited{ display:block; width:24px; height:25px; background-image:url("../images/icon_wear.png"); }
+	.hitbox_icon li.small.i10 a.icon_a:link, .hitbox_icon li.small.i10 a.icon_a:visited{ display:block; width:24px; height:25px; background-image:url("../images/icon_wet.png"); }
+	.hitbox_icon li.small.i11 a.icon_a:link, .hitbox_icon li.small.i11 a.icon_a:visited{ display:block; width:24px; height:25px; background-image:url("../images/icon_winter.png"); }
+
+	/*section3*/
+	.menu_box{ width:100%; height:50%; overflow:hidden; margin:0 auto; border-top:1px solid #eee; text-align:justify; }
+	.menu_box .container{ width:980px; height:100%; margin:0 auto; }
+
+	.row.r3{ width:980px; height:280px; float:left; margin-bottom:1%; }
+	.row.r4{ width:980px; height:280px; float:left; margin-bottom:1%; }
+	.row.r5{ width:980px; height:280px; float:left; }
+	
+	.a3{ float:left; }
+	.a3 a:hover, a:focus{ color:black; }
+
+	/*실험*/
+	/*.shadow:hover, .shadow:focus{ height:100%; background-color:#eee; box-shadow: 0 -1px 20px black; transition:all 1s; }*/
+
+	/*https://codepen.io/nxworld/pen/ZYNOBZ*/
+
+	/*hover 투명도*/
+	/*figure:hover{ opacity:.7; }*/
+
+	/*바로가기 숨김 테스트*/
+	.show1{ opacity:0;  }
+	.show1:hover{ opacity:1;}
+
+	.a3.a31{ width:31.5%; height:85%;/*원래는 95%*/ border:1px solid #ccc; margin-right:2%;  }
+	/*이미지 축소 .a3.a31*/
+	.a3.a31 img.a301_img{ width:100%; }
+	.a3.a32 img.warranty{ width:100%;  }
+	.a3.a33 img.maintainance{ width:100%; }
+
+	.a3.a32{ width:31.5%; height:85%;  border:1px solid #ccc; margin-right:2%;  }
+	/*이미지 축소 .a3.a32*/
+	.a3.a31 img.energy{ width:100%; }
+	.a3.a32 img.t_station{ width:100%; }/*이미지 변경 하기*/
+	.a3.a33 img.knowledge{ width:100%; }/*이미지 변경 하기*/
+
+	.a3.a33{ width:31.5%; height:85%; border:1px solid #ccc;   }
+	/*이미지 축소 .a3.a33*/
+	.a3.a31 img.news{ width:100%; }
+	.a3.a32 img.man{ width:100%; }
+	.a3.a33 img.hire{ width:100%;  }
+
+	.menu_box a{ display:block; }
+
+	strong.title_s{ font-size:150%; font-weight:bold; color:darkolivegreen; display:block; text-align:center; width:100%; /*height:20px;*/ padding-top:15px; /*background-color:skyblue;/*background-color:#ccc; display:block; height:50px; 박스*/  }
+  /*cadetblue, brown, burlywood, chocolate darkolivegreen*/
+	span.main_s{ font-size:85%; color:currentColor; display:block; width:100%; height:18px; text-align:center; padding:3% 0; }
+	span.show{ color:white; background-color:darkolivegreen; display:block; width:30%; height:20px; text-align:center; margin-left:35%; margin-bottom:5%; }
+	span.show_color{ color:white; font-weight:bold; font-size:130%; }
+	span.show:hover, span.show:visited{ background-color:#021602; display:block; width:30%; text-align:center;  }
+
+
+	/*footer*/
+	#footer{ width:100%; height:700px; overflow:hidden; padding-top:100px; }
+	/*	
+	.row.r6{ height:320px; }
+	.row.r7{ height:57px; background-color:#f6f6f6; }
+	.row.r8{ height:60px; }
+	.row.r9{ height:40px; }
+	*/
+
+	/*footer row.r6*/		
+	.row.r6{ height:60%; background-color:#021602; }	
+	.row.r6 .container{ background-color:#021602; margin:auto; }
+	.a7{ width:12%; margin:1%; height:68%; float:left; }/*row.r6*/
+
+	.row.r6 .a7 dl{ width:10%; }/*상하좌우바깥쪽*/ /*계속 수정*/
+	.row.r6 .a7 dt{ color:#A0A0A0; text-align:left; margin-bottom:20px; }
+	.row.r6 .a7 dd{ font-size:85%; padding-top:5px; }
+	.row.r6 .a7 dd a{ color:#C6C6C6; text-align:center; }
+	
+	/*.row.r7 공식파트너 사진들*/	
+	.row.r7{ width:100%; height:9%; background-color:#f6f6f6; }
+	.row.r7 .container{ width:980px; height:8%; }
+	dl.footer_middle{  }
+	dl.footer_middle dt.vertical_t{ width:100px; height:57px; padding-top:20px; float:left; }
+	dl.footer_middle dd.vertical{ width:120px; height:57px; float:left; } 
+	dl.footer_middle dd.vertical_l{ width:150px; height:57px; float:left; padding-top:5px; } 
+
+	/*.row.r8 사이버 감사실 블라블라~*/
+	.row.r8{ width:100%; height:10%;/*예비용*/  }
+	.row.r8 .link_c{ width:980px; overflow:hidden; }
+	.row.r8 .link_c li{ margin:2px 9px 6px 9px; float:left; font-size:90%; }
+	.row.r8 address{ text-align:center; font-size:85%; font-style:normal; }
+
+	/*.row.r9 이미지 스프라이트*/
+	.row.r9{ width:100%; height:40px;/**/ }
+	.row.r9 ul.icon_s{ width:100%; height:40px;/**/ }
+	
+	/*이미지 가로 방향 배치*/
+	.row.r9 ul.icon_s li.icon{  }
+	.row.r9 ul.icon_s li.icon.c1{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c2{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c3{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c4{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c5{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c6{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c7{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c8{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c9{ float:left; width:98px; }
+	.row.r9 ul.icon_s li.icon.c10{ float:left; width:98px; }
+	
+	.icon_s li a:link,
+	.icon_s li a:visited{ display:block; width:40px; height:40px; text-indent:-9999px; background-position:0 0; }
+	.icon_s li a:hover, .icon_s li a:focus{ background-position:0 -40px; }/*칼라*/
+		
+	/*footer 이미지스프라이트*/
+	.icon_s li.icon.c1 a:link, .icon_s li.icon.c1 a:visited{ display:block; width:40%; height:39%; background-image:url("../images/logo_box_2.png"); }
+	.icon_s li.icon.c2 a:link, .icon_s li.icon.c2 a:visited{ display:block; width:42%; height:39%; background-image:url("../images/facebook_box_2.png"); }
+	.icon_s li.icon.c3 a:link, .icon_s li.icon.c3 a:visited{ display:block; width:42%; height:39%; background-image:url("../images/youtube_box_2.png"); }
+	.icon_s li.icon.c4 a:link, .icon_s li.icon.c4 a:visited{ display:block; width:42%; height:39%; background-image:url("../images/blog_box_2.png"); }
+	.icon_s li.icon.c5 a:link, .icon_s li.icon.c5 a:visited{ display:block; width:42%; height:39%; background-image:url("../images/post_box_2.png"); }
+	.icon_s li.icon.c6 a:link, .icon_s li.icon.c6 a:visited{ display:block; width:42%; height:39%; background-image:url("../images/t_box_2.png"); }
+	.icon_s li.icon.c7 a:link, .icon_s li.icon.c7 a:visited{ display:block; width:42%; height:39%; background-image:url("../images/aca_box_2.png"); }
+	.icon_s li.icon.c8 a:link, .icon_s li.icon.c8 a:visited{ display:block; width:42%; height:39%; background-image:url("../images/nature_box_2.png"); }
+	.icon_s li.icon.c9 a:link, .icon_s li.icon.c9 a:visited{ display:block; width:42%; height:39%; background-image:url("../images/day_box_2.png"); }
+	.icon_s li.icon.c10 a:link, .icon_s li.icon.c10 a:visited{ display:block; width:42%; height:39%; background-image:url("../images/stock.png"); }
+	
+/*pc2 min 1600px~*/
+	@media all and	(min-width:1600px){		body{  }
+											.mobile_box{ display:none; }
+											.gnb_mobile{ display:none; }
+											.mobilegnb_box{ display:none; }
+											#visual{ width:100%; height:900px; margin:0 auto; position:relative }
+											/*.visual_train  { position:absolute; margin:0 auto;  
+															background: url(../images/hankook-main-visual5-1.jpg) no-repeat center;
+															background-size: contain; }*/
+
+	.section1.tab{ width:980px; height:50px; margin:0 auto; position:relative; }
+	.section1.tab:after{ clear:both; content:""; display:block; }/*:은 가상으로 ~을 해라*//*clearfix*/
+
+	ul.tabbox_top{ overflow:hidden; border:1px solid #ccc; height:50px; width:99.5%; }
+	ul.tabbox_top > li{ float:left; border-bottom:5px solid #021602; width:20%; height:92%; line-height:50px; }
+
+
+
+	.tabbox_top .panel{ width:974px; height:252px; position:absolute; top:52px; left:0px; margin:0px auto; border:1px solid #ccc; }
+
+	.timer_control_btn { position: absolute; bottom:68px;  right:43.5%;  z-index: 5; }
+
+
+
+
+											.section1.tab { height: 48%; }
+											.section2.hit_box { height: 78%; }
+											.menu_box{ height:1000px; }
+											.row.r6 { height: 67%; }
+											.row.r7{ height:11%; }
+											.mobile_welcome{ display:none; }
+											.row.r8{ height:13%; }
+											.row.r8 .link_c { margin-top: 7px; height: 44%; }
+											.row.r9{ height:40px; margin-top:10px; }
+
+	}
+/*pc1 min 1024px~ max 1599px*/
+	@media all and	(min-width:1024px) and (max-width:1599px) { body{  }
+																.mobile_box{ display:none; }
+																.mobile_welcome{ display:none; }
+																.gnbbox { width: 82%; height: 50%; }
+																
+																.mobilegnb_box{ display:none; }
+																.gnb { width: 100%; height: 100%; }
+																.gnb li { width: 100px; height: 100%; }
+																#visual { height:800px; }
+																/*.visual_train{
+																				background: url("../images/hankook-main-visual5-1.jpg") no-repeat center;
+																				background-size: contain; }*/
+																.mobilegnb_box{ display:none; }
+
+																.timer_control_btn { position: absolute; bottom:61px; right:37%; z-index: 5; }
+
+													.section1.tab{ width:980px; height:500px; margin:0 auto; position:relative; }
+													.section1.tab:after{ clear:both; content:""; display:block; }/*:은 가상으로 ~을 해라*//*clearfix*/
+
+													ul.tabbox_top{ overflow:hidden; border:1px solid #ccc; height:50px; width:99.5%; }
+													ul.tabbox_top > li{ float:left; border-bottom:5px solid #021602; width:20%; height:92%; line-height:50px; }
+
+
+
+													.tabbox_top .panel{ width:978px; height:277px; position:absolute; top:52px; left:0px; margin:0px auto; border:1px solid #ccc; }
+																
+																
+																.section2.hit_box { height: 100%; }
+
+																.a4{ height:320px; }
+																.a2.a21, .a2.a22{ height:265px; }
+																.hitbox_right .price_t { font-size:120%;  }
+															
+																.menu_box { height:1000px; }
+																.row.r6 { height: 64%; }
+																.row.r7 { height: 13%; }
+																
+																.row.r8 { height: 85px; }
+																.row.r8 .link_c { margin-top: 7px; height: 32%; }
+																.row.r9{ height:41px; margin-top:10px; }
+																
+																
+							}
+
+/*tablet2 min 768px~ max 1023px*/
+	@media all and	(min-width:768px) and (max-width:1023px) { body{  }
+														.container{ width:90%; } 
+														#header{  }
+
+
+														.info { width: 82%; }													
+
+														#visual{ height:600px; }
+														.visual_img img{ width:100%; }
+														.visual_train{ width:3840px; }
+														.visual_train > li{ width:768px; height:80%; float:left; }
+														.timer_control_btn { position: absolute; bottom:63px; right: 40%; z-index: 5; }													
+
+														.timer_control_btn { right: 37%; }
+														.visual_control li a, .visual_control li a:visited { width:20px; height:20px; }
+														.visual_control { bottom: 21%; }
+														
+														
+														.prev, .next { width: 5%; }
+
+
+		.sliding_box{ width:980px; height:408px; position:relative; }/*기준점*/
+		.sliding_overflow{ width:100%;/*980px*/ height:100%; overflow:hidden; }/* 한 칸만 보이게 설정 */
+
+		.visual_train{ width:500%;/*980*5*/ height:100%; }/* 기차칸은 그림 여러개 묶음 사이즈 */
+		.visual_train li{ width:20%;/*1/5*/ height:100%; float:left; position:relative; }/* 배경처리 */
+		.visual_train li.li1{ background:url("../images/hankook-main-visual5-1.jpg") no-repeat center; background-size:cover; }
+		.visual_train li.li2{ background:url("../images/Main_kor_170102_visual.jpg") no-repeat center; background-size:cover; }	
+		.visual_train li.li3{ background:url("../images/kor_main_02.jpg") no-repeat center; background-size:cover; }	
+		.visual_train li.li4{ background:url("../images/kor_main_04.jpg") no-repeat center; background-size:cover; }	
+		.visual_train li.li5{ background:url("../images/kor_main_05.jpg") no-repeat center; background-size:cover; }	
+														
+														.mobilegnb_box{ display:none; }
+
+
+														.searchbox{ width:90%; height:50px; border:5px solid #021602; background-color:white; margin:0 auto;  }	
+														.selectbox { width:20%; margin:0; }
+														.searchbox_type{ width:24%; height:50px; float:left;  }/*float:left 안 하면 오른쪽이 안 올라옴*/
+														.searchbox_type li{ float:left; font-size:11px; text-align:center; width:50%;  }/*차종, 사이즈 선택*/
+														.searchbox_type li a{ background-color:#021602; display:block; color:white; }
+														.searchbox .selectbox.s_icon{ padding-top:10px; }
+														.mobile_box{ display:none; }
+																																		
+
+														.gnb a{ font-size:90%; } 
+														.gnb li.gnb_last { width:85px; margin-left: 0; }
+
+														.gnb > li > a:link, .gnb > li > a:visited {  color: black;  display: block;  width: 100%;   height: 43px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 43px;
+    background: url(../images/bg_border.gif) no-repeat 100% 20px; }
+
+	.gnbbox{ width:82%; height:50px; margin-left:23%;/*로고사이즈 만큼하려고 했으나.......*/ margin-top:15px; }
+
+	.gnb{ width:519px;/*980-176*/ height:50px; }
+	.gnb li{ width:70px; height:50px;/*수정다시*/ float:left; }
+	.gnb > li > a:link, .gnb > li > a:visited{ color:black; display:block; width:100%; height:50px; text-align:center; font-weight:bold; line-height:50px;  background:url("../images/bg_border.gif") no-repeat 100% 20px; }
+	.gnb > li > a:hover, .gnb > li > a:focus{ border-bottom:white; border-bottom:#021602; color:black; display:block; width:100%; height:50px; text-align:center; font-weight:bold; line-height:50px;  }
+
+
+
+	.gnb:after{ clear:both; content:""; display:block; }/*:은 가상으로 ~을 해라*//*clearfix*/
+
+	.gnb li.gnb_fisrt{ margin-left:10px; }
+
+	.gnb_sub{ font-size:87%; }
+	.gnb .gnb_sub{ position:absolute; z-index:5; }/*가로버젼*/											
+
+	.gnb_sub li{ text-align:center; line-height:30px; }
+	.gnb_sub li a:link, .gnb_sub li a:visited{ display:block; background-color:#556b2f; color:white; }
+	.gnb_sub li a:focus, .gnb_sub li a:hover{ display:block; background-color:#021602; color:white; }
+	
+	.gnb_sub a:after{ content:""; display:block; width:0; height:0; position:absolute; right:0px; top:-25px; border:10px solid #556b2f;
+							border-color:transparent transparent #556b2f transparent; }
+
+
+														.gnb_sub.one{ width:7%; }
+														.gnb_sub.one a{ width:95%; }
+														.gnb_sub.two{ width:8%; }
+														.gnb_sub.two a{ width:95%; }
+														.gnb_sub.three{ width:7%; }
+														.gnb_sub.three a{ width:95%; }
+														.gnb_sub.four{ width:7%; }
+														.gnb_sub.four a{ width:95%; }
+														.gnb_sub.five{ width:7%; }
+														.gnb_sub.five a{ width:95%; }
+														.gnb_sub.six{ width:7%; }
+														.gnb_sub.six a{ width:95%; }
+														.gnb_sub.seven{ width:7%; }
+														.gnb_sub.seven a{ width:107%; }			
+														
+	
+
+
+													
+														.section1.tab { height: 31%; }
+														
+													.section1.tab{ width:768px; height:500px; margin:0 auto; position:relative; }
+													.section1.tab:after{ clear:both; content:""; display:block; }/*:은 가상으로 ~을 해라*//*clearfix*/
+
+													ul.tabbox_top{ overflow:hidden; border:1px solid #ccc; height:50px; width:100%;}
+													ul.tabbox_top > li{ float:left; border-bottom:5px solid #021602; width:20%; height:92%; line-height:50px;  }
+													.tabbox_top .panel{ width:90%; height:215px; position:absolute; top:52px; left:40px; margin:0px auto; border:1px solid #ccc; }
+ul.tabbox_top li a:link, ul.tabbox_top li a:visited { font-size: 14px; }
+
+														.section2.hit_box { height:800px; }
+														.hitbox.hb1 { height: 300px; }
+														.hitbox.hb2 { height: 340px; }
+
+														/*section3*/
+														.menu_box{ width:735px;/*width:768px*/ height:600px; overflow:hidden; margin:0 auto; border-top:1px solid #eee; text-align:justify; }
+														.menu_box .container{ width:100%; height:100%; margin:0.1% auto; }
+
+														.row.r3{ width:100%; height:305px; float:left; margin-bottom:1%; }
+														.row.r4{ width:100%; height:305px; float:left; margin-bottom:1%; }
+														.row.r5{ width:100%; height:305px; float:left; }
+														
+														.a3{ float:left; }
+														.a3 a:hover, a:focus{ color:black; }
+
+														.show1{ opacity:0;  }
+														.show1:hover{ opacity:1;}
+
+														.a3.a31{ width:31.5%; height:85%;/*원래는 95%*/ border:1px solid #ccc; margin-right:2%;  }
+														strong.title_s {  margin-top: 10px; height:36px; }
+														span.main_s { height: 30px; }
+														.gnbbox_moible{ display:none; }
+														.mobile_welcome{ display:none; }
+														.row.r6 { height:450px; }
+														.a7 { height:96%; }
+														.row.r8 { height: 85px; }
+														.row.r8 .container{ width:90%; }
+														.row.r8 .link_c { width:90%; }
+
+
+														/*.row.r9 이미지 스프라이트*/
+														.row.r9{ display:none;  }
+														.row.r9 ul.icon_s{  height:100%;/**/ width:100%; }
+														}								
+
+
+/*tablet1 min 481px~ max 767px*/
+	@media all and	(min-width:481px) and (max-width:767px) { body{  }
+																.container{ width:90%; } 
+																#header { height:11%; }
+																#header .container{ width:90%; height:100%; border-bottom:0; }
+																#visual{ display:none; }
+																#footer{ height:15%; padding-top:3px;}
+																
+																.info{ display:none; }
+																.logo{ width:100%; height:100%; }
+																.logo a{  text-align: center;  height:100%;   width: 100%; overflow: hidden; margin-top:2%; }
+																.logo a img { width:23%; }
+								
+																.gnbbox{ display:none; }
+														
+																/*여기서부터 수정*/
+																.gnb_mob{ width:100%; margin:0 auto; }
+																.gnb_mob li{ width:25%; height:100%; float:left; margin-top:18%; text-align:center; line-height:25px; }
+																.gnb_mob li a{ font-size:11px; border:1px solid #ccc; display:block; width:100%; background-color:#021602; color:#ccc; }
+													
+
+
+										.mobilegnb_box{ width:200px; height:100%; }
+										.gnb_mobile_control{ width:44px; height:44px; position:absolute; top:0; left:0; }
+										.gnb_mobile_control a{ display:block; width:100%; height:100%; text-indent:-99999px; background:url("../images/bt_menu_mobile.jpg") no-repeat 0 0; }
+
+										.gnb_mobile{ width:200px; height:100%; padding-top:50px; background-color:rgba(0,0,0,0.8); position:absolute; top:44px;/*top:44px*/ left:-250px;/*left:-250px*/ }
+										.gnb_mobile li{ /*height:50px;*/ border-bottom:1px solid #ccc; }
+										.gnb_mobile li a{ display:block; line-height:50px; padding-left:10px; text-decoration:none; background-color:#021602; color:white; font-size:1.2; }
+						
+										.mobilegnb_sub li a{ display:block; line-height:50px; padding-left:10px; text-decoration:none; background-color:#556b2f; color:white; font-size:1.2; }
+
+															
+																.searchbox{ display:none; }
+																.visual_train img{ /*background-size:cover;*/ height:80%; }/*cover or contain*/
+																.section1.tab{ display:none; }
+																	
+																.mobile_box{ width:100%; height:22%; margin-top:3%;  }
+																.mobile_box li{ display:block; width:50%; height:100%; text-align:center; float:left;  }
+																.mobile_box li a{ background-color:#021602; color:#ccc; display:block; width:70%; line-height:27px; height:100%; text-align:center; margin-left:15%; }
+
+																.section2.hit_box { height:900px; }
+																.section2.hit_box .container {   width: 90%; }															
+																.hitbox.hb1 { height: 32%; }
+																.hitbox.hb2{ height:50%; }
+
+																.a2.a21{ width:48%; }
+																.a2.a22 { width: 48%; }
+																.hitbox_right.hl1 img{ width:90%; }
+																.hitbox_right.hl2 img{ width:90%; }
+
+
+																.row.r1.hitbox.hb1 ul.hitbox_icon{ float:left;  position:relative;  padding-top:0px; border-top: 0px dashed #ccc; border-width: 0px;
+																					width: 87%; top: 6px; left: 7%; }																
+																.row.r2.hitbox.hb2{ }
+																.a4{ width:50%; height:50%;/*고정*/ }
+																.a4 .hitbox_right{  width:96%; height:90%; border-radius: 5px; border: 2px solid #ccc; text-align:left; 
+																								padding-top:0%;  float:none; }
+																/*
+																.a4.a41{ width:100%; height:25%; }
+																.a4.a42{ width:100%; height:25%; }
+																.a4.a43{ width:100%; height:25%; }
+																.a4.a44{ width:100%; height:25%; }
+																*/ 
+																.a4 .hitbox_right .tire_title img{ width:40%; }
+																.a4 .hitbox_right .img_tire img{ width:40%; text-align:right; }
+																.a4 .hitbox_right .img_tire{ text-align:right; position:relative; bottom:17%; right:1%; }
+																strong.price { font-size: 120%;  padding-bottom:0; }
+																ul.hitbox_icon{  float:left;  position:relative;  padding-top:0px; border-top: 0px dashed #ccc; border-width: 0px; width: 58%;
+																					top:-96px; left: 1%;  }
+																.hitbox_icon li{   }
+																.hitbox_icon li a{  }
+																.hitbox_right .price_t { display:block; width:40%; height:7%;
+																							   font-size: 120%; position:relative; top:9px; bottom:0; left:0; right:0;
+																							   }
+																/*section3*/
+																.menu_box{ width:100%; height:620px }
+																.menu_box .container{ width:95%; margin:0 auto; }
+																.row.r3{ width:100%; height:210px; margin-bottom:0; }
+																.row.r4{ width:100%; height:210px; margin-bottom:0;  }
+																.row.r5{ width:100%; height:210px; }
+
+																strong.title_s{ font-size:113%; margin-top:1%; height:40%; }
+																span.main_s{ display:none; }
+																span.show{ font-size:83%; width:39%; height:100%;  border: 1px solid darkolivegreen; margin-left:35%; margin-bottom:0;  margin-top:6%; }
+
+																/*footer*/ 
+																.row.r6{ display:none; }
+																.row.r6 .container{ display:none; }
+																.row.r7{ display:none; }
+																.a7{ display:none; }
+																.row.r8{ height:73%; }
+																.row.r8 .container{ width:90%; }
+																.mobile_welcome{ width:100%; height:40px; background-color:#021602; margin-bottom:1%; overflow:hidden; }
+																.mobile_welcome li{ width:33%; height:50%; line-height:45px; float:left; text-align:center; }
+																.mobile_welcome a{ color:#ccc; }	
+																.mobile_welcome li.wel.h1{ border-right:1px solid #ccc; display:block; height:100%; }
+																.mobile_welcome li.wel.h2{ border-right:1px solid #ccc; display:block; height:100%; }
+
+
+																.row.r9{ display:none; }
+																.link_c{ display:none; }
+																}
+																
+/*mobile min 280px~ max 480px*/	
+	@media all and	(max-width:480px) { body{ } 
+											.container{ width:90%; } 
+											#header { height: 8%; }
+											#header .container{ height:100%; border-bottom:0; }
+											#visual{ display:none; }
+											#footer{ height:17%; padding-top:3px;}
+											
+											.info{ display:none; }
+											.logo{ width:100%; height:100%; }
+											.logo a{  text-align: center;  height:100%;   width: 100%; overflow: hidden; margin-top:2%; z-index:10; }
+											.logo a img { width:27%; }			
+
+											.gnbbox{ display:none; }
+									
+											/*여기서부터 수정*/
+											.gnb_mob{ width:100%; background:url("../images/1484847206_Menu_icon.png") no-repeat left; position:absolute;  top:1px;  left:0;	background-size:42px; }
+											.gnb_mob li{ width:25%; height:100%; float:left; margin-top:18%; text-align:center; line-height:25px; }
+											.gnb_mob li a{ font-size:11px; border:1px solid #ccc; display:block; width:100%; background-color:#021602; color:#ccc; }
+								
+
+										.mobilegnb_box{ width:200px; height:100%; }
+										.gnb_mobile_control{ width:44px; height:44px; position:absolute; top:0; left:0; }
+										.gnb_mobile_control a{ display:block; width:100%; height:100%; text-indent:-99999px; background:url("../images/bt_menu_mobile.jpg") no-repeat 0 0; }
+
+										.gnb_mobile{ width:200px; height:100%; padding-top:50px; background-color:rgba(0,0,0,0.8); position:absolute; top:44px;/*top:44px*/ left:-250px;/*left:-250px*/ }
+										.gnb_mobile li{ /*height:50px;*/ border-bottom:1px solid #ccc; }
+										.gnb_mobile li a{ display:block; line-height:50px; padding-left:10px; text-decoration:none; background-color:#021602; color:white; font-size:1.2; }
+						
+										.mobilegnb_sub li a{ display:block; line-height:50px; padding-left:10px; text-decoration:none; background-color:#556b2f; color:white; font-size:1.2; }
+
+											.searchbox{ display:none; }
+											.visual_img img{ /*background-size:cover;*/ height:0%; }/*cover or contain*/
+											.section1.tab{ display:none; }
+												
+											.mobile_box{ width:100%; height:22%; margin-top:3%; }
+											.mobile_box li{ display:block; width:50%; height:100%; text-align:center; float:left;  }
+											.mobile_box li a{ background-color:#021602; color:#ccc; display:block; width:70%; line-height:27px; height:100%; text-align:center; margin-left:15%; }
+
+											.section2.hit_box { height:1000px;}
+											.section2.hit_box .container{ height:2000px; }
+											.row.r1.hitbox.hb1{ display:none; }
+											.a2{ display:none; }
+											
+											.row.r2.hitbox.hb2{ height:1000px; }
+											.a4{ width:100%; height:25%; }
+											.a4 .hitbox_right{  width:98%; height:85%; border-radius: 5px; border: 2px solid #ccc; text-align:left; 
+																			padding-top:0%;  float:none; }
+											/*
+											.a4.a41{ width:100%; height:25%; }
+											.a4.a42{ width:100%; height:25%; }
+											.a4.a43{ width:100%; height:25%; }
+											.a4.a44{ width:100%; height:25%; }
+											*/ 
+											.a4 .hitbox_right .tire_title img{ width:40%; }
+											.a4 .hitbox_right .img_tire img{ width:40%; text-align:right; }
+											.a4 .hitbox_right .img_tire{ text-align:right; position:relative; bottom:17%; right:1%; }
+											strong.price { font-size: 120%;  padding-bottom:0; }
+											ul.hitbox_icon{  float:left;  position:relative;  padding-top:0px; border-top: 0px dashed #ccc; border-width: 0px; width: 80%;
+																top: -104px; left: 1%; width:50%; }
+											.hitbox_icon li{   }
+											.hitbox_icon li a{  }
+											.hitbox_right .price_t { display:block; width:40%; height:7%;
+																		   font-size: 120%; position:relative; top:-33px; bottom:0; left:0; right:0;   }
+											/*section3*/
+											.section3.menu_box{ display:none; }
+											/*footer*/ 
+											.row.r6{ display:none; }
+											.row.r6 .container{ display:none; }
+											.row.r7{ display:none; }
+											.a7{ display:none; }
+											.row.r8{ height:100%; }
+											.mobile_welcome{ width:100%; height:40px; background-color:#021602; margin-bottom:7%; overflow:hidden; }
+											.mobile_welcome li{ width:33%; height:100%; line-height:40px; float:left; text-align:center;  														
+																		}
+
+											.mobile_welcome a{ color:#ccc; }	
+											.mobile_welcome li.wel.h1{ border-right:1px solid #ccc; display:block; height:100%; }
+											.mobile_welcome li.wel.h2{ border-right:1px solid #ccc; display:block; height:100%; }
+
+											address{ width:100%; height:15%; }
+											.row.r9{ display:none; }
+											.link_c{ display:none; }
+
+
+	}
+

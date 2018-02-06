@@ -1,0 +1,87 @@
+
+.skip_nav{ width:100%; }
+.skip_nav li{}
+.skip_nav li a:link, .skip_nav li a:visited{ width:100%; padding:20px; display:block; text-align:center; background-color:#012602;  
+											color:white; font-weight:bold; position:absolute; top:-100px; left:0; z-index:100; }
+.skip_nav li a:focus, .skip_nav li a:active { top:0; }
+
+#visual{ height:900px; }
+
+
+
+
+.tab.section1{ height:58%; }
+
+ul.tabbox_top li{ height:90%; width:19.9%; }
+
+.hit_box.section2{ height:87%; }
+
+.menu_box{ height:900px; }
+
+.r6.row{ height:66%; }
+.mobile_welcome{ display:none; }
+.r8.row{ height:15%; }
+.r9.row{ height:40px; }
+
+
+	.tabbox_top .panel{ width:100%; height:64.5%; position:absolute; top:11%; left:0%; margin:0px auto; }
+	
+	.tabbox_top #tab1{ background:url("../images/hankook-tires-ventus-s2-as-banner-02.jpg") no-repeat center 0; 
+	margin:0 auto; background-size:0%;
+	/*
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../images/hankook-tires-ventus-s2-as-banner-02.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../images/hankook-tires-ventus-s2-as-banner-02.jpg', sizingMethod='scale')";
+	*/
+	}
+
+	/*승용차*/
+	.tabbox_top #tab2{ background:url("../images/hankook-tires-ventus-s2-as-banner-01.jpg") no-repeat; 
+	margin:0 auto; background-size:contain; }
+	/*suv*/
+	.tabbox_top #tab3{ background:url("../images/hankook-tires-vantra-lt-banner-02.jpg") no-repeat; 
+	margin:0 auto; background-size: contain; }
+	/*소형트럭*/
+	.tabbox_top #tab4{ background:url("../images/hankook-tires-smartflex-ah35-banner-02.jpg") no-repeat; 
+	margin:0 auto; background-size: contain; }
+	/*트럭버스*/
+	.tabbox_top #tab5{ background:url("../images/hankook-tires-winter-icept-iz2a-banner-02.jpg") no-repeat; 
+	margin:0 auto; background-size: contain; }
+	/*겨울용*/
+
+	nav.mobilegnb_box { *display:none; display:none; }
+
+
+  .timer_control_btn{ right:43%; }
+	
+		/*pc2 			min 1600px~*/
+		@media all and	(min-width:1600px){		body{ }	
+											nav.mobilegnb_box { *display:none; display:none; }
+											ul.gnb_mobile{ *font-size:0; *color:white; color:white; }
+											ul.gnb_mobile li{ *font-size:0; *color:white; }
+											#gnbbox{ *font-size:0; }
+											.gnb_mobile_control{ display:none; }
+											.gnb_mobile_control a{ font-size:0;  }
+
+
+		}
+	
+		/*pc1 			min 1024px~ max 1599px*/
+		@media all and	(min-width:1024px) and (max-width:1599px) { body{  }
+													nav.mobilegnb_box{ display:none; }
+													ul.gnb_mobile{ display:none; }
+		}
+	
+		/*tablet2 		min 768px~ max 1023px*/
+		@media all and	(min-width:768px) and (max-width:1023px) { body{  }
+														.mobilegnb_box{ display:none; }
+		}
+	
+		/*tablet1 		min 481px~ max 767px*/
+		@media all and	(min-width:481px) and (max-width:767px) { body{  } }
+		
+		/*mobile 		min 280px~ max 480px*/
+		@media all and	(max-width:480px) { body{  } }
+
+
+
+

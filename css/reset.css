@@ -1,0 +1,7 @@
+/* reset.css : 브라우저 초기화 */
+	*{ margin:0; padding:0 }
+	body, html{ height:100%; }/*반응형할 때 꼭 넣어야하는 것>> 부모랑 자식에 height:100%;*/
+	li{ list-style-type:none; }
+	img{ border:0 none; }
+	fieldset{  border:0 none; }
+	header, footer, section, article, aside{ display:block; }

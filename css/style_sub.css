@@ -1,0 +1,592 @@
+	.skip_nav{ width:100%; }
+	.skip_nav li{}
+	.skip_nav li a{ width:100%; padding:20px; display:block; text-align:center; background-color:rgba(0,0,0,0.5); color:white; font-weight:bold; position:absolute; top:-100px; left:0; }
+	.skip_nav li a:hover, .skip_nav li a:focus { top:0; }
+
+
+
+/*sub right*/
+.subcontent.box{ width:100%; }
+
+
+h1 img{ width:100%; }
+
+.submenu.left{ height:100%; }
+.subcontent.right{ height:100%; }
+
+
+/*sub login*/
+	.sub_id h1{ font-size:58px; margin-left:0; }
+	.sub_id h1 img{ width:100%; }
+	.sub_idl .desc{ font-size:20px; line-height:26px; }
+	.sub_id  .desc strong{ }
+	.sub_id  form{ width:100%; }
+	.sub_id fieldset{ border:1px solid #ccc; margin:3% 0; }
+	.sub_id  form p{ font-size:13px; line-height:22px; }
+	.login_left p{ margin:1%; } 
+
+	.sub_id legend{ width:1px; height:1px; overflow:hidden; font-size:0; line-height:0; position:absolute; left:-9999px; }
+	.sub_id label{ display:inline-block; width:30%; text-transform:uppercase; text-align:center; }
+
+	.sub_id  input[type='text'], 
+	.sub_id input[type='password'] { width:60%; padding:3px 8px; border:1px solid #a19197; line-height:20px;  }
+	
+	.sub_id input[type='submit']{ width: 35%; padding: 22px; margin: 3px auto; background-color:darkolivegreen; color: white; border: 0 none; }
+
+	.login_left{ margin-left:20%; margin-top:3%; margin-bottom:2%; width:40%; float:left; }
+	.login_right{ display: block; margin-top:3%; width:40%; float:right; }
+
+	.loginwarning.w1.login{ width:100%; overflow:hidden;  }
+	.loginsearch.s1.login, .loginsearch.s2.login{ width:30%; float:left; margin-left:18%; margin-top:1%; padding:0px 0px 0px 30px;
+									background:url("../images/1484648110_Searchicons-search-people.png") no-repeat left;	}
+	.loginsearch.button.login{ width:40%; float:right; }
+	.loginsearch.button.login input[type='button']{ width:60%; padding:5px; background-color:darkolivegreen; color: white; border:0 none; }
+
+	.loginwarning.w2{ width:90%; overflow:hidden; margin:25px auto; 
+							padding:1%; background-color:#eee; border:1px solid #ddd; }
+	.loginwarning.w2 a{ color:#021602; }
+	.warning.w1{ width:90%; float:left; margin-left:10%; }
+	.warning.w2{ width:90%; float:left; margin-left:10%; }
+	.warning.w2 a{ background-color:#021602; color:white; }
+
+/*sub join*/
+	.subcontent.sub_join{ width:100%; height:100%; overflow:hidden; }
+	.subcontent.sub_join h1 img{ width:100%; }
+
+	.sub_join h1 img{ width:100%; }
+	.sub_join  .desc{ font-size:20px; line-height:26px; }
+	.sub_join  .desc_ex2{ width:89%; float:left; margin-top:3%; margin-right:2%; }
+	.sub_join  form{ width:100%; }	
+	
+	.box_join{ width:100%; height:100%; overflow:hidden; margin-top:7%; }
+	.join_type{ width:32%; height:210px; float:left; border:1px solid #ccc; margin-right:1%; }
+
+	.join_sbox{ display:block; width:100%; text-align:center; margin-top:5%; }  /*strong�̶� p�� ���δ� ū �ڽ�*/
+	
+	.join_img{ width:100%; text-align:center; }
+	.join_title{ width:100%; height:25px; display:block; text-align:center; margin-top:2%; color:darkolivegreen; font-size:16px; }
+	.join_main{ display:block; width:75%; overflow:hidden; padding-left:13%; text-align:center; }
+
+	.join_button input[type='button']{ width:40%; padding:5px; margin-left:30%; margin-top:6%; background-color:darkolivegreen; 
+														color: white; border:0 none; text-align:center; }
+
+/*sub_���ͽ�����*/
+	.subcontent.sub_motorsports{ width:100%; height:120%; }
+	.subcontent.sub_motorsports .container{ width:980px; height:100%; overflow:hidden; }
+	.subcontent.sub_motorsports .container h1 img{ width:100%; }
+
+	.submenu.left{ width:30%; float:left; }
+	.subcontent.right{ width:70%; float:right; }
+
+	.submenu.left ul{ width:90%; border-top:1px solid #ccc; margin-top:10%; }
+	.submenu.left li a:link, 
+	.submenu.left li a:visited{ display:block;  padding:15px; border-bottom:1px solid #ccc; font-size:14px;	}
+	
+	.submenu.left li a:hover, 
+	.submenu.left li a:focus{ display:block;  padding:15px; border-bottom:1px solid darkolivegreen; font-size:14px; } 
+
+	.subcontent.right { margin-top:3%; }
+	.subcontent.sub_motorsports .subcontent.right p{ margin-top:2%; margin-bottom:2%; }
+	.subcontent.right_moive{ margin-top:5%; }
+
+/*event subpage*/
+/*이벤트*/
+	.subcontent.sub_event{ width:100%; margin:0 auto;  height:100%; }	
+	.subcontent.sub_event h1 img{ width:100%; }
+	.subcontent.sub_event h3{ border-bottom:1px solid #ccc; padding-bottom:2%; margin-bottom:5%; }
+
+	.subcontent.event_ing { float:right; width:100%; }
+	.subcontent.event_ing h3.first { margin-top:3%; }
+	.event_box{ width:100%; }
+	.event_box:after{ clear:both; content:""; display:block; }/*:은 가상으로 ~을 해라*//*clearfix*/
+	.event_box li{ width:32%; margin-right:2%; float:left; margin-bottom:3%; text-align:justify; }	
+	.event_box li.three{ margin-right:0%; }
+
+	.event_box li a{ display:block; width:100%; }
+	.event_box li a img{ width:100%; }
+
+	.event_box li a strong{ background:url("../images/plus.png") no-repeat right; display:block; width:100%; height:45px; line-height:45px; font-weight:bold; font-size:100%; }
+	.event_box li a span{ display:block; width:100%; font-size:85%; }
+
+	.modaloverlay{ display:none; position:fixed; left:0; top:0; width:100%; height:100%; 
+		background-color:rgba(0,0,0, 0.5); }
+	.contentoverlay{ display:none; position:fixed; left:50%;/*left:44%;*/ top:50%;/*top:36%;*/ border:20px solid #fff; margin-top:-100px; margin-left:-100px; }
+	.contentoverlay .close{ width:50px; height:50px; right:-10px; top:-10px; position:absolute; cursor:pointer; }
+
+
+/*service subpage*/
+	.subcontent.sub_service{ width:100%; height:1400px; }	
+	.subcontent.sub_service h1 img{ width:100%; }
+
+/*labeling(Ÿ�̾� ������ �Һ�ȿ�� �����)*/
+	.subcontent.sub_service .submenu.left{ height:100%; }
+	.subcontent.sub_service .subcontent.right{ height:100%; }
+
+	.box_in{ width:99.5%; height:18%; border:1px solid #ccc; margin-left:0.5%; margin-top:1%; margin-bottom:7%; }
+	.box_explain{ width:65%; height:100%; float:left; margin-left:2%; margin-top:1%; }
+	.box_explain.t1{  }
+	.box_explain.t1 dt{ font-weight:bold; padding:2% 0;}
+	.box_explain.t1 dd{ padding-left:3%; }
+
+	.explain_img{ width:30%; float:right; }
+	.explain_img img{ width:95%; margin-top:3%;  }
+
+	.subcontent.sub_service .subcontent.right h3{ margin-top:4%; margin-bottom:1%; }
+	.subcontent.sub_service .subcontent.right strong{ display:block; width:100%; height:2%; margin-top:2%; }
+
+	.outline_last{ margin-bottom:10%; }
+
+	.rr_explain{ width:96%; height:12%; margin-top:1%; }
+	.wg_explain{ width:96%; margin-top:1%; }
+
+/*join_info*/		
+		.subcontent.sub_join_info{ width:100%; height:170%; overflow:hidden; }
+		
+		/*����*/
+		.join_step.clfix{ width:100%; height:18%; overflow:hidden; border-bottom:1px solid #ccc; }
+		.join_step li { position: relative;   float: left;   width: 24%;   height: 100%;
+		margin-right: 1px;  padding: 0;  border-top: 4px solid #cccccd; }
+		.step_wrap strong{ display:block; width:100%; margin-bottom:6%; }
+		/*����*/
+
+
+		.submenu.subtop.join_info fieldset{ border:0 none; }
+		.submenu.subtop.join_info legend{ font-weight:bold; text-indent:1em; margin-bottom:20px; }
+	
+		.submenu.subtop.join_info p{ text-align:left; width:97%; margin:0; padding:10px; border:1px solid #ccc; background-color:#eee; }
+		.submenu.subtop.join_info p.join_step{ width:100%; margin:4% 0; padding:0; border:0; background-color:white;   }
+		.submenu.subtop.join_info p.join_step img{ width:100%; }
+		.submenu.subtop.join_info label{ width:15%; display:inline-block; /*float:left;*/ }
+
+		.submenu.subtop.join_info input{ width:10%; background-color:darkolivegreen; border: none; }
+		
+		.submenu.subtop.join_info form p { width:95%; padding:10px; }
+		.submenu.subtop.join_info strong{ color:crimson; }
+
+		.submenu.subtop.join_info  input[type='text'], .submenu.subtop.join_info input[type='password']
+		{ width:20%; padding:3px 8px; background-color:white; border:1px solid #a19197; line-height:20px;  }
+		.submenu.subtop.join_info input[type='text'], .submenu.subtop.join_info input[type='password']
+		{ width:20%; padding:3px 8px; background-color:white; border:1px solid #a19197; line-height:20px;  }
+		.submenu.subtop.info_button input[type='button']{ width:10%; padding:3px 8px; background-color:#666; border:1px solid #a19197; 
+														border-radius:10px; line-height:20px; color:white; }
+		.addinfocheckbox .display_h{ }
+		.addinfocheckbox strong.add_cho{ float:left; display:block; width:20%; }
+  	
+	
+		.login_infowarning.w1 p{ border:1px solid #ccc; background-color:#eee; }		
+		.login_infowarning.w1 input[type='button']{ width:10%; padding:3px 8px; border:1px solid #a19197; 
+														border-radius:10px; line-height:20px; color:white; float:left; } 
+		.login_infowarning.w1 ul{ width:100%; margin-top:3%; border:1px solid #ccc; }
+
+		.info_button_warning{  }
+
+/*�̿���*/
+	.user_agreement{ width:98%; margin:20px auto; padding:20px; background-color:white; }
+	.user_agreement h2{ margin-bottom:20px; }
+
+	.agree_area.a2 { margin: 3% 0;  width: 100%; }
+	.user_agreement fieldset{ border:0 none; }/*�� �Ⱥ��̰�*/
+	.user_agreement legend{ width:100%; color:#333; font-size:11px; padding:50px 0 10px; border-bottom:1px solid #666; font-weight:bold; }
+
+	.hidden{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;  }
+
+	textarea{ margin:20px; border:1px solid #ccc; width:80%; height:200px; padding:20px; color:#8f8f8f; font-size:11px; line-height:150%; }
+	.user_agreement p{ margin:10px 20px; font-size:11px; color:#666; }
+
+	input[type="checkbox"]{ margin:0 20px 0 40px; }
+	input, label, span{ vertical-align:middle; }
+	.btn_area.right input[type='button'] { width: 20%;  padding: 5px;  margin-left: 3%;  /* margin-right: 0%; */  /* margin-top: 0%; */  background-color: darkolivegreen;
+    color: white;  border: 0 none;   text-align: center;   float: right; }
+
+/*helpdesk*/
+
+	.subcontent.sub_helpdesk{ height:70%; }
+	.subcontent.right.qna{ width:70%; }	
+
+	
+	.qnaTab{ width:100%; height:500px; position:relative;  }
+	.qnaTab:after{ clear:both; content:""; display:block; }/*:은 가상으로 ~을 해라*//*clearfix*/
+	.qnaTab > li{ width:20%; height:40px; float:left; line-height:40px; }
+	.qnaTab > li > a:link, .qnaTab > li > a:visited{ display:block; text-align:center;
+		text-decoration:none; font-size:12px; transition:0.3s; border-top:1px solid #ccc; border-bottom:1px solid #012602; }
+	.qnaTab > li > a:hover, .qnaTab > li > a:focus, .qnaTab > li > a.selected1{ background-color:#021602; color:white; }
+	.pannel{ width:99.8%; height:420px; position:absolute; top:8%; left:0%; margin:1px auto; }
+
+	.faq-box{ border-top:1px solid #021206; }
+	.faq-box > dt > a { display:block;  padding:5px 30px 5px 70px;  color:#333;  font-size:13px;  background: url(../images/question.png) no-repeat 27px center; border-bottom:1px solid #ccc; }
+	.ans { padding: 10px 30px 10px 110px;  color: #666;  font-size: 12px;   border-top: 1px solid #ebebeb;
+    background: #f4f4f6 url(../images/answer.png) no-repeat 40px 15px; }
+
+	.search_none{ text-align:center;  padding-bottom:10px;  padding-top:10px; }
+
+
+
+
+
+
+/*movie*/
+
+
+		.subcontent.sub_movie{ width:100%; height:1700px; }
+
+
+		.main_movie{ width:100%; float:left; }
+		.movie_introduce{ float:right; margin-bottom:5%; }
+	
+		.subcontent.movie.main{ width:100%; height:30%; overflow:hidden; margin-bottom:5%; }
+		.movie_left{ width:68%; margin-right:2%; float:left; }
+		.movie_right{ width:30%; margin-top:1%; float:right; }
+
+
+		.movie_right strong{ display:block; text-align:center; padding-bottom:5%; border-bottom:1px solid #ccc; }
+		.movie_right span{ display:block; text-align:justify; padding-top:5%; }
+
+
+		.subcontent.movies.list{ width:100%; height:70%; overflow:hidden; }
+		.subcontent.movies.list strong{ display:block; text-align:center; padding-top:0%; padding-bottom:5%; font-size:90%; border-bottom:1px solid #ccc; }
+		.subcontent.movies.list span{ display:block; text-align:justify; padding-top:5%; font-size:85%; }
+				
+
+		.movie.h1{ width:100%; height:40%; float:left; margin-bottom:5%; }
+		.movie.h2{ width:100%; height:40%; float:left; }
+
+		.list_m{ width:32%; float:left; }
+		.list_m.one, .list_m.two, .list_m.four, .list_m.five{ margin-right:2%; }
+
+		audio{ width:100%; }
+		.audiodesc{ margin-top:2%; height:60px; overflow:scroll; /*auto, scroll, hidden, visible*/ font-size:90%;  }
+		video{ width:100%; margin:20px  }
+		video, iframe{ width:100%; margin:20px 0; background-color:#333; }
+		iframe{ border:1px solid #333; }
+
+		
+
+
+
+/*commitee*/
+
+
+.subcontent.right.csr{}
+
+.subcontent.right.csr h3{ margin-bottom:3%; }
+.subcontent.right.csr .csr1{ margin-bottom:4%; }
+
+	
+/*passenger-cars*/
+/*무상보증안내*/
+.subcontent.box.sub_pass-car{ height:2000px; }
+.subcontent.right.top.tab{ height:20%; border-bottom:1px solid #ccc; }
+.invest_navi{ width:100%; height:40px; overflow:hidden; padding:4px 0 0 5px; margin-bottom:20px; background-color:#ececec;  }
+.invest_navi li.on { width:50%; height:100%; float:left; }
+.invest_navi li.on{ width:49.5%; height:100%; line-height:40px; text-align:center;  border-top: 1px solid #bbb; background-color:#fff;  border-right: 1px solid #bbb; }
+.invest_navi li.on.first{ border-left: 1px solid #bbb; }
+.invest_navi li.on a { display:block; width:100%; height:100%; font-weight:bold; text-align:center; text-decoration:none; }
+
+.war_left_img{ float:left; width:30%; margin-right:5%; margin-left:5%; }
+.war_left_img img{ width:100%; }
+.war_right{ float:right; width:60%; }
+.war_right img{ width:100%; background-color:pink; margin-top:3%; }
+
+.passenger-cars_button input[type='button']{ width:30%; padding:3px 8px; background-color:#666; border:1px solid #a19197; 
+														line-height:20px; color:white; }
+
+.subcontent.right.bottom.p-c{ height:80%; }
+.subcontent.right.bottom.p-c h3{ margin:4% 0; padding-left:6%; background:url("../images/columns.png") no-repeat left; top:3%; left:0; right:0; width:94%; height:4%; line-height:40px; }
+
+.subcontent.right.bottom.p-c h4{ margin:4% 0; padding-left:6%; background:url("../images/columns.png") no-repeat left; top:3%; left:0; right:0; width:94%; height:4%; line-height:40px; }
+.subcontent.right.bottom.p-c dt{ padding:1% 0; padding-left:3%; background:url("../images/dot.png") no-repeat left; top:0%; left:0; right:0;  }
+.subcontent.right.bottom.p-c dd{ padding:1% 0; }
+.subcontent.right.bottom.p-c .ex{ padding:0; }
+
+.subcontent.right.bottom a{ color:pink; }
+.subcontent.right.bottom li{ padding:1% 0; padding-left:5%; background:url("../images/dot.png") no-repeat left; top:0%; left:0; right:0; }
+.subcontent.right.bottom li.last{ padding:0; }
+.subcontent.right.bottom li.last a{ padding:0; }
+
+.notice.w1{ width:95%; overflow:hidden; margin:25px auto; 
+							padding:1%; background-color:#eee; border:1px solid #ddd; }
+.notice_war.w1{ float:left; width:10%; }
+.notice_war.w1 img{ width:100%; }
+
+.notice_war.w2{ float:right; width:82%; margin-top:3%; margin-right:3%; }
+
+/*csr-principle.html*/
+/*지속가능경영 -  sub >>정책*/
+
+.subcontent.right.src_prin h4{ margin:4% 0; padding-left:4%; position:relative; background:url("../images/columns.png") no-repeat left; top:0%; left:0; right:0; padding:0 5%; }
+.subcontent.right.src_prin h4.first{ margin:0; margin-bottom:4%; }
+.subcontent.right.src_prin p{ color:#858585; }
+
+/*heatly*/
+/*임직원 건광과 안전관리*/
+.heatly_box{ width:100%; overflow:hidden; margin-bottom:10%; }
+.heatly_box h3{ margin-bottom:2%; }
+
+.hs_img{ float:left;  }
+.hs_img img{ width:100%; }
+.heatly_outline{ width:47%; float:right; }
+.heatly_outline h4{ margin:5% 0; }
+.heatly_outline h4.first{ margin:0; margin-bottom:5%; }
+.heatly_outline p{ text-align:justify; }
+
+.chart { width:100%;  }
+.chart img{ width:100%;  }
+
+.heal_h{ display:block; width:100%; height:27px; line-height:27px; }
+.heal_h.himg{ float:left; width:20%; height:100%; }
+.heal_h.title{ float:right; width:80%; height:100%; }
+
+
+.healthy_arrco a{ display:block; border-bottom: 1px solid #d9d9d9;
+			  color:#333; font-size:12px; overflow:hidden; height:100%; }
+
+/*finance*/
+/*재무정보 - 재무성과*/
+	.subcontent.sub_finance{ height:6000px; }
+
+	.subcontent.sub_finance h4{ margin-top:7%; margin-bottom:1%; }
+	.subcontent.sub_finance img{ width:100%; }
+
+	.financeboard{ width:100%; border-top:3px solid #888; margin:50px 0; }
+	.financeboard div{ border-bottom:1px solid #888; padding:10px 0; overflow:hidden; text-align:center; }
+	.financeboard span, .financeboard strong{ display:block; float:left; }
+	.bno{ width:10%;  }
+	.btitle{ width:45%; }
+
+	.unit{ float:right; }
+
+	.fiance_tab{ overflow:hidden; width:100%; height:100%; margin:5% 0; }
+	.fiance_tab > li{ float:left; border-top:1px solid #ccc; border-bottom:1px solid #021602; width:20%; height:100%; line-height:45px; }
+	.fiance_tab li a:link, .fiance_tab li a:visited{ display:block; color:#021602; width:100%; height:100%; text-align:center; text-decoration:none; font-size:12px; 
+																			transition:0.3s; }
+	.fiance_tab > li > a:hover, 
+	.fiance_tab > li > a:focus, 
+	.fiance_tab > li > a.selected{ background-color:#021602; color:white; }
+	/*, .tab > li > a.selected*/
+
+	.fiance_tab li a:hover, .fiance_tab li a:focus{ background-color:#021602; color:white; }
+
+
+/*air-pressure*/
+/*서비스 - 적정 공기압 점검*/
+
+.subcontent.air{ width:100%; height:33%; overflow:hidden; }
+.subcontent.air h3{ margin-top:3%; margin-bottom:3%; }
+.subcontent.air img{ width:100%; }
+.air_left{ width:48%; margin-right:2%; height:95%; float:left; padding-bottom:5%; }
+.air_right{ width:48%; height:95%; float:right; padding-bottom:5%;  }
+
+.air_left h3.first{ margin:0%; }
+
+
+.air_left ul.importance{ width:100%; height:100%; padding-top:5%; padding-bottom:5%; }
+.subcontent .air span{  display:block; width:100%; text-align:center; }
+
+
+.air_right.explain{ width:100%; height:100%; }
+
+/*tire-history*/
+/*타이어 a to z*/
+
+	.subcontent.sub_history{ height:1000px; }
+	.subcontent.right.history{ width:70%; }	
+
+	
+	.tireTab{ width:100%; height:1000px; position:relative; /*background-color:pink;*/  }
+	.tireTab:after{ clear:both; content:""; display:block; }/*:은 가상으로 ~을 해라*//*clearfix*/
+	.tireTab > li{ width:25%; height:40px; float:left; line-height:40px; }
+	.tireTab > li > a:link, .tireTab > li > a:visited{ display:block; text-align:center;
+		text-decoration:none; font-size:12px; transition:0.3s; border-top:1px solid #ccc; border-bottom:1px solid #012602; }
+	.tireTab > li > a:hover, .tireTab > li > a:focus, .tireTab > li > a.selected2{ background-color:#021602; color:white; }
+	.pannel_1{ width:99.8%; height:800px; position:absolute; top:8%; left:0%; margin:1px auto; }
+
+	.tire_type{ width:100%; overflow:hidden; }
+	.tire_type li{ width:33%; height:33%; float:left; }
+	.tire_type span{ display:block; text-align:center; }
+
+	.fun.h1{ width:100%; overflow:hidden; }
+	.fun.h2{ width:100%; overflow:hidden; }
+	.fun.h3{ line-height:20px; }
+	.h1_left, .h1_right{ width:49%; float:left; }
+	.h1_left img, .h1_right img{ width:100%; }
+	.h1_left{ margin-right:2%; }
+
+	.str_left{ width:47%; float:left; margin-right:3%; }
+	.str_left img{ width:100%; }
+
+	.str_right{ float:right; width:50%; line-height:1%; line-height:20px; }
+	.str_right dt{ margin:5% 0; }
+	.str_right dt.one{ padding-left:7%; background:url("../images/number-one-in-a-circle.png") no-repeat 1px center; }
+	.str_right dt.two{ padding-left:7%; background:url("../images/number-two-in-a-circle.png") no-repeat 1px center; }
+	.str_right dt.three{ padding-left:7%; background:url("../images/number-three-in-a-circle.png") no-repeat 1px center; }
+	.str_right dt.four{ padding-left:7%; background:url("../images/number-four-in-circular-button.png") no-repeat 1px center; }
+	.str_right dt.five{ padding-left:7%; background:url("../images/number-five-in-circular-button.png") no-repeat 1px center; }
+	.str_right dt.six{ padding-left:7%; background:url("../images/number-six-in-a-circle.png") no-repeat 1px center; }
+	.str_right dt.seven{ padding-left:7%; background:url("../images/number-seven-in-a-circle.png") no-repeat 1px center; }
+	.str_right dt.eight{ padding-left:7%; background:url("../images/number-eight-in-a-circle.png") no-repeat 1px center; }
+	.str_right dt.nine{ padding-left:7%; background:url("../images/number-nine-in-a-circle.png") no-repeat 1px center; }
+
+	.str_right dd{ font-size:85%; }
+
+	/**/
+	.propertiesboard{ width:100%; border-top:3px solid #888; margin:0 auto; }
+	.propertiesboard div{ border-bottom:1px solid #888; padding:3px 0; overflow:hidden; text-align:center; }
+	.propertiesboard span, .propertiesboard strong{ display:block; float:left; }
+	.propertiesboard .bno{ width:9%;  }
+	.propertiesboard .btitle{ width:9%; }
+
+	.unit{ float:right; }
+
+
+/*people-culture*/
+/*인사제도*/
+
+.subcontent.right.career{ text-align:justify; height:800px; }
+.subcontent.right.career h4.first{ margin:0; margin-bottom:4%; }
+.subcontent.right.career h4{ margin:4% 0; }
+.subcontent.right.career h4{ padding:0 5%; background:url("../images/star-for-number-one.png") no-repeat; }
+.subcontent.right.career p{ color:#666; padding:0 5%; }
+
+/*proactive*/
+/*인재상*/
+
+.subcontent.right.proactive{ text-align:justify; height:1000px; }
+.subcontent.right.proactive h3{ font-size:30px; margin-bottom:5%; }
+.subcontent.right.proactive h4{ margin:3% 0; height:20px; background:url("../images/dot.png") no-repeat; padding:0 3%; }
+.subcontent.right.proactive p{ margin-bottom:5%; color:#666; }
+
+.subcontent.right.proactive p.pl{ margin-bottom:10%; }
+
+
+
+/**/
+/*타이어 갤러리*/
+
+.subcontent.sub_tire{ height:100%; }
+.subcontent.tire_top{ width:100%; height:60%; margin:2% 0; position:relative; }
+.subcontent.tire_top:after{ clear:both; content:""; display:block; }/*:은 가상으로 ~을 해라*//*clearfix*/
+
+ul.tab_tire{ overflow:hidden; border:1px solid #ccc; height:50px; width:99.5%; }
+ul.tab_tire > li{ float:left; border-bottom:5px solid #021602; width:20%; height:92%; line-height:50px; }
+ul.tab_tire > li > a:link, ul.tab_tire > li > a:visited{ display:block; color:#021602; height:100%; text-align:center; text-decoration:none; font-size:14px; 
+																		transition:0.3s; }
+ul.tab_tire > li > a:hover, 
+ul.tab_tire > li > a:focus, 
+ul.tab_tire > li > a.selected_3{ background-color:#021602; border-bottom:4px solid #021602; color:white;  }
+.tire_panel{ width:976px; height:330px;  position:absolute; top:66px; left:0%; margin:1px auto; border:1px solid #ccc; }
+ul.tab_tire > li > a:hover, ul.tab_tire > li > a:focus{ background-color:#021602; color:white;  }
+
+
+
+/*탭안에 div*/
+/**/
+.tireleft_product{ float:left; width:45%; height:94%; padding: 2% 2% 0% 2%; border-right:1px solid #ccc; }
+
+.tireleft_product h4{ height:20px; font-size:16px; }
+.tireleft_product img{ width:100%; }
+.tireleft_product strong{ display:block; height:50px; }
+.p_last{ background-color:pink; }
+
+
+.tireright{ float:right; width:50%; height:100%;}
+.tireright_main{ width:80%; margin:0 auto; background-color:#333; position:relative; top:5%; left:10%; }
+
+.tireright_main img{ width:55%; left:10%; position:absolute; }
+.tireright_control{ width:80%; height:33px; padding:2% 0; margin:0 auto; background-color:#012602; text-align:center; margin-top:265px; }
+.tireright_control li{ display:inline; }
+.tireright_control li a img{ width:87%; }
+.tireright_control li a:link, .tireright_control li a:visited{ display:inline-block; width:28px; height:30px; border:1px solid #fff; background-color:white; }
+.tireright_control li a:hover, .tireright_control li a:focus{ border:1px solid #123; opacity:0.5; }
+
+
+
+
+/*기업정보*/
+.subcontent.right.com h2{ margin-bottom:3%; }
+.subcontent.right.com p{ margin-bottom:5%; }
+
+/*찾아오시는 길*/
+/*map.html*/
+.sub_map{}
+
+.han_title
+
+.box_slash{ width:100%; margin-top:2%; height:140px; margin-bottom:2%; }
+
+.mapimg img{ width:100%; }
+
+.trans_01{ background:url("../images/train.png") no-repeat left; padding:0 8%; height:90px; }
+.trans_01 dt{ padding-top:22px; font-weight:bold; font-size:17px; }
+.trans_02{ background:url("../images/bus.png") no-repeat left; padding:0 8%; height:90px; }
+.trans_02 dt{ padding-top:19px; font-weight:bold; font-size:17px; }
+.box_call{ height:120px;  padding: 19px 19px 0 19px;
+    background-color: #f7f7f7; margin-top:1%; }
+.call{ width: 100%; height:50px; margin-bottom:10px; position: relative;  border: 1px solid #e6e6e6;
+    background-color: #fff; }
+.call .num{ background:url("../images/speech-bubble.png") no-repeat 22px; padding:0 4%; float:left; width:19%;
+			height:50px; line-height:50px; font-size:18px; font-weight:bold; text-align:center; }
+.call .txt1{ float:right; width:73%; height:50px; line-height:50px; text-align:justify; font-size:16px; color:#858585; }
+
+
+.link li{ width:15%; margin-right:1%; height:40px; line-height:40px; float:left; }
+.link li a{ border:1px solid #ccc; display:block; text-align:center; background-color:#021602; color:white; }
+
+
+#map{ width:100%; height:400px; }
+.han_title{ margin:2% 0; font-size:bold; font-size:20px; }
+
+/*qna*/
+/*1:1문의*/
+
+.qna h3{ margin:1% 0; width:70%; float:right; }
+.qna form{ width:100%; margin:55px auto; }
+.qna fieldset{ border:0 none; }
+.qna legend{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; font-size:0; line-height:0; }
+.qna p{ border-bottom:1px solid #ccc; padding:10px; background-color:#eee; }
+
+.qna p label{ display:inline-block; width:20%; font-weight:bold; }
+
+.qna p.first{ border-top: 2px solid #666666; /* border-bottom: 1px solid #999999; */ }
+
+
+
+/*csr원칙, 임직원 건강*/
+.subcontent.box.src_prin, .subcontent.box.sub_healty{ height:1000px; }
+
+
+
+/*pc2 min 1600px~*/
+	@media all and	(min-width:1600px){		body{  }
+	.gnbbox_moible{ display:none; }
+
+
+	}
+/*pc1 min 1024px~ max 1599px*/
+	@media all and	(min-width:1024px) and (max-width:1599px) { body{  }
+	.gnbbox_moible{ display:none; }		
+																
+																
+							}
+
+/*tablet2 min 768px~ max 1023px*/
+	@media all and	(min-width:768px) and (max-width:1023px) { body{  }
+
+														}								
+
+
+/*tablet1 min 481px~ max 767px*/
+	@media all and	(min-width:481px) and (max-width:767px) { body{  }
+
+																}
+																
+/*mobile min 280px~ max 480px*/	
+	@media all and	(max-width:480px) { body{ } 
+
+
+
+	}
+
+
+
+
+

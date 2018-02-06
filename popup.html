@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>tmpt</title>
+		<style>
+		/* reset.css  */
+		*{  margin:0; padding:0; }     
+		li{ list-style-type:none; } 
+		img{ border:0 none; }
+		fieldset{  border:0 none; }
+		/* basc.css  */
+		body{  font-family:"Malgun Gothic" , dotum , sans-serif; font-size:90%; color:#000;}
+		a:link, a:visited{  color:#000;   text-decoration:none; }
+		a:hover, a:focus{  color:#f00;   text-decoration:underline; }
+
+		/* .basic{ width:980px; margin:50px auto; padding:50px; background-color:white; border-top:5px solid #ddd; }*/
+		/* h3{ text-transform:uppercase; text-indent:1em; border-left:10px solid pink; margin:10px 0; }	*/
+
+		.popWrap{ width:300px; height:300px; /*border-radius:50%;*/ position:fixed; top:20%; left:10%; background-color:white; overflow:hidden; border:5px solid #123; }
+		.popWrap h3{ font-size:25px; text-align:center; padding:10px 0; }
+		.popWrap .popimg{ text-align:center; /*height:100px;*/ height:136px; }
+		.popWrap .popdesc{ padding:10px; text-align:center; font-size:80%; }
+		.popWrap .popdesc span{ display:block; font-size:90%; }
+		
+		.popWrap .qrcode{ padding:10px; text-align:center; }
+		.popWrap .qrcode img{ width:50%; }
+
+		.popWrap .todayclose{ text-align:center; font-size:66%; color:#fff; background-color:darkred; padding:10px; }
+		.popWrap .todayclose a:link, .popWrap .todayclose a:visited{ color:#efefef; font-weight:bold; }
+		.popWrap .todayclose a:hover, .popWrap .todayclose a:focus{ color:#aaa; font-weight:bold; }
+
+		</style>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>		
+
+	</head>
+	<body>
+		<div class="basic popWrap">
+			<h3>NOTICE</h3>
+			<p class="popimg">
+				<img src="images/QRCodeImg.jpg" alt="팝업창으로 열리는 QR코드"/>
+			</p><!--popimg-->
+			<p class="popdesc">
+				<span>본 사이트는 상업적목적이 아닌</span>
+				<span>개인 포트폴리오 용도로 제작되었으며,</span>
+				<span>홈페이지의 일부 내용과 기타 이미지 등은</span>
+				<span>그 출처가 따로 있음을 밝힙니다.</span>
+			</p><!--popdesc-->
+			<p class="todayclose">
+				<input type="checkbox" id="subpop" name="subpop" title="오늘 하루동안 이 창 열지 않음" onclick="controlCookies();"/>
+				<label for="subpop">오늘 하루동안 이 창 열지 않음</label>
+				<a href="#" title="" onclick="controlCookies(); return false;">[닫기]</a>
+			</p><!--todayclose-->
+		</div><!--basic popWrap-->
+		<script src="./js/cookies.js"></script>
+		<script>
+			function controlCookies()
+			{
+			// 1. 체크 박스가 체크되어 있다면, setCookie( 쿠키이름, 쿠키값, 안보여줄 날짜 ) 설정
+			// 2. .popWrap 안보이게 설정
+				console.log( $(".todayclose input:checked").length ); //( : > 가상으로 인식해서)체크가 될 수도 안 될 수도
+				if( $(".todayclose input:checked").length == 1 )
+				{
+					setCookie("subpop" , "done", 1)// 하루동안
+				}
+				$(".popWrap").hide();
+			}
+			// 3. 브라우저가 로딩이 끝났다면
+				// .getCookie(쿠키이름)을 이용해 쿠키가 설정되어 있는지 확인하고
+				// .popWrap를 보일지 말지 결정
+				// if( 쿠키가 설정되어 있는지 확인 ){ 안보이기 }
+				// else{ 보이기 }
+			
+			$(function(){
+				if( getCookie("subpop") == "done" )
+				{
+					$(".popWrap").hide();
+				}
+				else
+				{
+					$(".popWrap").show();
+				}
+			});
+		</script>
+	</body>
+</html>
+<!--
+	1. 네이버 QR 코드 만들기
+	2. https://www.w3schools.com/js/js_cookies.asp
+		> A Function to Set a Cookies
+		> A Function to Get a Cookies
+
+-->
